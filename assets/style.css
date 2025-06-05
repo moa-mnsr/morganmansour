@@ -6,72 +6,109 @@
 }
 
 body {
-  background-color: silver;
-  color: black;
-  font-family: "Inclusive Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  width: 100vw;
+    background-color: silver;
+    color: black;
+    font-family: "Inclusive Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    width: 100vw;
 
-  /* to see the container */
-  border: 1px solid red; 
-
-}
-
-header, main {
- 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  /* to see the container */
-  margin: 10px;
-  padding: 10px;
-  border: 1px solid orange; 
+    /* to see the container */
+    border: 1px solid red;
 
 }
 
+header,
 main {
-   /* to see the container */
-  height: 10em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    /* to see the container */
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid orange;
+
+}
+
+
+
+.name, section {
+    display: flex;
+        justify-content: center;
+
+
+    /* to see the container */
+    border: 1px solid yellow;
+    margin: 5px;
+    padding: 5px;
+
+    
 }
 
 main section {
-   /* to see the container */
-  height: 5em;
+    border-top: 5px solid black;
 }
 
-section {
-   /* to see the container */
-  border: 1px solid yellow;
-  margin: 5px;
-  padding: 5px;
+.projects-container, .projects-category {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
 }
 
-.title, h1, h2 {
-  /* to see the container */
-  border: 1px solid greenyellow; 
+.projects-container, .projects-category, .title {
+    /* to see the container */
+    border: 1px solid greenyellow;
+    margin: 5px;
+    padding: 5px;
+
 }
 
 
-
-img {
-  width: 100%;
-  height: auto;
+h1,
+.project, .skills {
+    /* to see the container */
+    border: 1px solid cyan;
+    margin: 1px;
+    padding: 1px;
 }
 
-div.title {
-  
-  font-weight: 600;
-  text-align: center;
-  font-size: 3rem;
-
-   /* to see the container */
-  margin: 1px;
-  padding: 1px;
-  border: 1px solid greenyellow;
+h1 {
+    font-weight: 600;
 }
+
+h2 {
+    font-weight: 500;
+}
+
+.title {
+
+    font-weight: 700;
+    text-align: center;
+    font-size: 2rem;
+
+}
+
+h2,
+p, li {
+    /* to see the container */
+
+    border: 1px solid violet;
+    margin: 1px;
+    padding: 1px;
+
+}
+
+/*
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3rem;
+}/*
 
 /* 
 
