@@ -19,7 +19,31 @@ body {
 
 }
 
-header,
+header {
+    display: flex;
+    justify-content: center;
+
+    /* to see the container */
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid orange;
+
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+        justify-content: center;
+
+
+    /* to see the container */
+    border: 1px solid yellow;
+    margin: 5px;
+    padding: 5px;
+
+    
+}
+
 main {
 
     display: flex;
@@ -35,7 +59,7 @@ main {
 
 
 
-.name, section {
+section {
     display: flex;
         justify-content: center;
 
@@ -58,7 +82,7 @@ main section {
     width: 50%;
 }
 
-.projects-container, .projects-category, .title {
+.projects-container, .projects-category, .title, .sub-title {
     /* to see the container */
     border: 1px solid greenyellow;
     margin: 5px;
@@ -83,11 +107,22 @@ h2 {
     font-weight: 500;
 }
 
+.name {
+    display: flex;
+    justify-content: center;
+}
+
 .title {
 
     font-weight: 700;
-    text-align: center;
     font-size: 2rem;
+
+}
+
+.sub-title {
+
+    font-weight: 400;
+    font-size: 1.5rem;
 
 }
 
