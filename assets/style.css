@@ -1,32 +1,68 @@
 @import url("reset.css");
-@import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital,wght@0,300..700;1,300..700&display=swap');
+
+@font-face {
+  font-family: "Authentic Sans";
+  src: url("fonts/authentic-sans-60.otf") format("opentype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+ font-family: "Authentic Sans";
+  src: url("fonts/authentic-sans-90.otf") format("opentype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Authentic Sans";
+  src: url("fonts/authentic-sans-130.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+ font-family: "Authentic Sans";
+  src: url("fonts/authentic-sans-150.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* --- COLOR & FONT VARIABLES --- */
+:root {
+  --Trees: #2A5241;
+  --Clouds: #F1F1F1;
+  --Ash: #444444;
+  --font-main: "Authentic Sans", sans-serif;
+}
 
 * {
     box-sizing: border-box;
 }
 
 body {
-    background-color: silver;
-    color: black;
-    font-family: "Inclusive Sans", sans-serif;
+    background-color: var(--Clouds);
+    color: var(--Trees);
+    font-family: var(--font-main);
     font-optical-sizing: auto;
-    font-weight: 400;
+    font-weight: 200;
     font-style: normal;
     width: 100vw;
 
-    /* to see the container */
-    border: 1px solid red;
+    /* to see the container 
+    border: 1px solid red;*/
 
 }
 
 header {
     display: flex;
     justify-content: center;
+    margin: 2em;
 
-    /* to see the container */
+    /* to see the container 
     margin: 10px;
     padding: 10px;
-    border: 1px solid orange;
+    border: 1px solid orange;*/
 
 }
 
@@ -36,10 +72,10 @@ header {
         justify-content: center;
 
 
-    /* to see the container */
+    /* to see the container 
     border: 1px solid yellow;
     margin: 5px;
-    padding: 5px;
+    padding: 5px;*/
 
     
 }
@@ -50,10 +86,12 @@ main {
     flex-direction: column;
     justify-content: center;
 
-    /* to see the container */
+    margin: 2em;
+
+    /* to see the container 
     margin: 10px;
     padding: 10px;
-    border: 1px solid orange;
+    border: 1px solid orange;*/
 
 }
 
@@ -64,16 +102,21 @@ section {
         justify-content: center;
 
 
-    /* to see the container */
+    /* to see the container 
     border: 1px solid yellow;
     margin: 5px;
-    padding: 5px;
+    padding: 5px;*/
 
     
 }
 
 main section {
-    border-top: 5px solid black;
+    border-top: 2px solid var(--Trees);
+    margin: 1em;
+}
+
+.projects-category {
+    margin: 2em 0 1em 0;
 }
 
 .projects-container, .projects-category {
@@ -82,30 +125,33 @@ main section {
     width: 50%;
 }
 
+/* 
 .projects-container, .projects-category, .title, .sub-title {
-    /* to see the container */
+    to see the container 
     border: 1px solid greenyellow;
     margin: 5px;
     padding: 5px;
 
 }
+*/
 
-
-h1,
-.project, .skills {
-    /* to see the container */
-    border: 1px solid cyan;
-    margin: 1px;
-    padding: 1px;
+.project {
+    border: 1px solid var(--Trees);
+    margin: 1em;
 }
 
 h1 {
-    font-weight: 600;
+    margin: 1em 0;
+    /* to see the container
+    border: 1px solid cyan;
+    margin: 1px;
+    padding: 1px;*/
+} 
+
+h1, h2 {
+    font-weight: 400;
 }
 
-h2 {
-    font-weight: 500;
-}
 
 .name {
     display: flex;
@@ -113,28 +159,42 @@ h2 {
 }
 
 .title {
+    font-size: 2.5em;;
+    margin: 1em;
+}
 
-    font-weight: 700;
-    font-size: 2rem;
+.title, h1 {
+     font-weight: 400;
+    text-transform: uppercase;
+}
 
+.title, .sub-title {
+text-align: center;
 }
 
 .sub-title {
-
-    font-weight: 400;
-    font-size: 1.5rem;
-
+    
+    font-weight: 300;
+    margin: 1em 0;
 }
+
+.sub-title, h1 {
+       font-size: 1.5rem;
+}
+
 
 h2, h3,
 p {
-    /* to see the container */
+
+    padding: 1em;
+     /*to see the container 
 
     border: 1px solid violet;
     margin: 1px;
-    padding: 1px;
+    padding: 1px;*/
 
 }
+    
 
 @media (max-width: 650px)
     {
@@ -152,19 +212,19 @@ p {
  }
 
 .projects-container {   
-    margin: 2em 3em;
+    margin: 1em;
  }
 
  .project {
     margin: 1em 0;
  }
 
- .project h3 {
-    font-style: italic;
- }
+ /*
+h3 {
+   border: 1px solid var(--Trees);
 }
 
-/*
+
 h1 {
     font-size: 4rem;
 }
