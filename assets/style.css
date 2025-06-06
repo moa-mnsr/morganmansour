@@ -126,14 +126,42 @@ h2 {
 
 }
 
-h2,
-p, li {
+h2, h3,
+p {
     /* to see the container */
 
     border: 1px solid violet;
     margin: 1px;
     padding: 1px;
 
+}
+
+@media (max-width: 650px)
+    {
+        main section {
+            flex-direction: column;
+        }
+
+        .projects-container, .projects-category {
+  
+    width: auto;
+}
+
+ .projects-category {
+    text-align: center;
+ }
+
+.projects-container {   
+    margin: 2em 3em;
+ }
+
+ .project {
+    margin: 1em 0;
+ }
+
+ .project h3 {
+    font-style: italic;
+ }
 }
 
 /*
