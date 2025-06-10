@@ -37,11 +37,11 @@
   --font-main: "Authentic Sans", sans-serif;
 }
 
-/* Visibility of elements*/
-
+/* Visibility of elements
 body, header, main, section, div, h1, h2, h3, p {
         border: .5px solid red;
-}
+}*/
+
 
 * {
     box-sizing: border-box;
@@ -109,6 +109,7 @@ main {
   background-color: var(--Cream);
   color: var(--Ash);
   border-color: var(--Ash);
+  cursor: pointer;
  }
 
 
