@@ -33,6 +33,7 @@
   --Trees: #2A5241;
   --Clouds: #F1F1F1;
   --Ash: #444444;
+  --Cream: #fffef9;
   --font-main: "Authentic Sans", sans-serif;
 }
 
@@ -60,7 +61,7 @@ body {
 header {
     display: flex;
     justify-content: center;
-    margin: 3em 0 0 0;
+    margin: 6em 0 0 0;
   }
 
 .name {
@@ -79,7 +80,7 @@ main, section {
 
 main {
     flex-direction: column;
-     margin: 2em 0;
+     margin: 5em 0;
 }
 
 
@@ -95,13 +96,19 @@ main {
     text-align: center;
     
     border: 1px solid var(--Trees);
-    border-radius: 3em;
+    border-radius: 4em;
+    
+    width: 18em;
+    height: 14em;
+    
+    margin: 0 2em;
+    
+ }
 
-    width: 20em;
-    height: 6em;
-
-    margin: 0 1em;
-
+ .projects-category:hover {
+  background-color: var(--Cream);
+  color: var(--Ash);
+  border-color: var(--Ash);
  }
 
 
@@ -111,6 +118,7 @@ main {
 }
 
 h1 {
+   font-weight: 200;
     margin: 1em 0;
 } 
 
