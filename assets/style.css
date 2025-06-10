@@ -34,43 +34,73 @@
   --Clouds: #F1F1F1;
   --Ash: #444444;
   --Cream: #fffef9;
-  --font-main: "Authentic Sans", sans-serif;
+  --font-nav: "Authentic Sans", sans-serif;
 }
 
-/* Visibility of elements
-body, header, main, section, div, h1, h2, h3, p {
-        border: .5px solid red;
-}*/
+/* Visibility of elements*/
+body, header, nav, main, div, section, h1, p {
+        border: 1px solid red;
 
+}
+
+div, section, h1, p {
+  border-style: dotted;
+}
 
 * {
     box-sizing: border-box;
 }
 
 
+/* body as vertical flex container to center the page */
+
 body {
     background-color: var(--Clouds);
     color: var(--Trees);
-    font-family: var(--font-main);
+    font-family: var(--font-nav);
     font-optical-sizing: auto;
     font-weight: 200;
     font-style: normal;
     width: 100vw;
+    height: 100vh;
+
+   
 }
 
-header {
+.page-container {
+    margin: 0 5em;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    height:100vh;
+}
+
+
+header {
     margin: 6em 0 0 0;
   }
 
-.name {
+.title-container {
     display: flex;
     flex-direction: column;
-        justify-content: center;
 }
 
-main, section {
+
+.name {
+    font-size: 2.5em;;
+    margin: 1em 0;
+    font-weight: 200;
+}
+
+.name, h1 {
+    text-transform: uppercase;
+}
+
+.name {
+text-align: center;
+}
+
+nav, .nav-container {
 
     display: flex;
     justify-content: center;
@@ -78,19 +108,19 @@ main, section {
 
 }
 
-main {
+nav {
     flex-direction: column;
      margin: 5em 0;
 }
 
 
-.projects-container, .projects-category {
+.projects-container, .button {
     display: flex;
     flex-direction: column;
     width: 50%;
 }
 
-.projects-category {
+.button {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -105,7 +135,7 @@ main {
     
  }
 
- .projects-category:hover {
+ .button:hover {
   background-color: var(--Cream);
   color: var(--Ash);
   border-color: var(--Ash);
@@ -123,43 +153,55 @@ h1 {
     margin: 1em 0;
 } 
 
-h2 {
-    font-weight: 200;
+main {
+          margin: 1em 0;
 }
 
-h2, h3,
+section {
+  margin:
+}
+
 p {
     padding: 1em; 
 }
 
-.name {
-    display: flex;
-    justify-content: center;
-}
-
-.title {
-    font-size: 2.5em;;
-    margin: 1em;
-    font-weight: 200;
-}
-
-.title, h1 {
-    text-transform: uppercase;
-}
-
-.title {
-text-align: center;
-}
 
 
 
-.sub-title, h1 {
-       font-size: 1rem;
-}
 
 
 @media (max-width: 650px) {
-        main section {
-            flex-direction: column;
+        
+     header {
+        margin: 2em 1em;        
+     }
+
+     .name {
+       margin: 1em 0 .5em 0;
+     }
+
+      nav {
+        display: flex;
+            justify-content: center;
         }
+
+        .nav-container {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
+        
+        nav {
+          margin: 0;
+        }
+
+        .button {
+          height: 3em;
+          width: 15em;
+          margin: .5em 0;
+        }
+
+        
     }
