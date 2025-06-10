@@ -81,7 +81,9 @@ body {
 header {
     display: flex;
     justify-content: center;
-    margin: 2em;
+    margin: 1em 0;
+    padding: 1em 0;
+    border-bottom: 3px solid var(--Trees);
 }
 
 .name {
@@ -96,7 +98,7 @@ main {
     flex-direction: column;
     justify-content: center;
 
-    margin: 2em;
+
 }
 
 
@@ -119,9 +121,10 @@ section {
     text-align: center;
     
     border: 1px solid var(--Trees);
-    
-    width: 15em;
-    height: 15em;
+    border-radius: 3em;
+
+    width: 20em;
+    height: 6em;
     
     margin: 2em 1em;
     padding: 1em;
