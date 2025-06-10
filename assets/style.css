@@ -39,29 +39,8 @@
 /* Visibility of elements*/
 
 body, header, main, section, div, h1, h2, h3, p {
-        border: .5px dotted tomato;
+        border: .5px solid red;
 }
-
-/* 
-header, main {
-    
-        border: 1px dashed orange;
-}
-
-.name {
-        border: 1px dashed yellow;
-}
-
-.title, .sub-title {
-    border: 1px dashed chartreuse; 
-}
-
-h1 { 
-     border: 1px dashed violet; 
-}
-
-End of test section */
-
 
 * {
     box-sizing: border-box;
@@ -81,10 +60,8 @@ body {
 header {
     display: flex;
     justify-content: center;
-    margin: 1em 0;
-    padding: 1em 0;
-    border-bottom: 3px solid var(--Trees);
-}
+    margin: 3em 0 0 0;
+  }
 
 .name {
     display: flex;
@@ -92,20 +69,17 @@ header {
         justify-content: center;
 }
 
-main {
+main, section {
 
     display: flex;
-    flex-direction: column;
     justify-content: center;
-
+   
 
 }
 
-
-section {
-    display: flex;
-        justify-content: center; 
-        margin: 1em;
+main {
+    flex-direction: column;
+     margin: 2em 0;
 }
 
 
@@ -125,9 +99,9 @@ section {
 
     width: 20em;
     height: 6em;
-    
-    margin: 2em 1em;
-    padding: 1em;
+
+    margin: 0 1em;
+
  }
 
 
@@ -157,22 +131,18 @@ p {
 .title {
     font-size: 2.5em;;
     margin: 1em;
-    font-weight: 400;
+    font-weight: 200;
 }
 
 .title, h1 {
     text-transform: uppercase;
 }
 
-.title, .sub-title {
+.title {
 text-align: center;
 }
 
-.sub-title {
-    
-    font-weight: 300;
-    margin: 1em 0;
-}
+
 
 .sub-title, h1 {
        font-size: 1rem;
