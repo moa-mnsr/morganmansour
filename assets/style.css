@@ -37,7 +37,7 @@
   --font-nav: "Authentic Sans", sans-serif;
 }
 
-/* Visibility of elements*/
+/* Visibility of elements
 body, header, nav, main, div, section, h1, p {
         border: 1px solid red;
 
@@ -46,6 +46,8 @@ body, header, nav, main, div, section, h1, p {
 div, section, h1, p {
   border-style: dotted;
 }
+
+*/
 
 * {
     box-sizing: border-box;
@@ -71,7 +73,6 @@ body {
     margin: 0 5em;
     display: flex;
     flex-direction: column;
-    height:100vh;
 }
 
 
@@ -152,19 +153,67 @@ h1 {
     margin: 1em 0;
 } 
 
+
 main {
           margin: 1em 0;
 }
 
-section {
-  margin:
+h2 {
+  font-weight: 200;
+  text-transform: uppercase;
+  margin: 1em 0;
+   text-align: center;
+
+ 
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 2em;
+  text-transform: uppercase;
+  margin: 1em 0;
+   text-align: center;
+}
+ 
+div.drop {
+  padding: 0 1em;
+  text-align: center;
 }
 
 p {
-    padding: 1em; 
+  font-weight: 100;
+  font-size: 1em;
+  line-height: 1.5;
+  padding: 1em; 
+ 
 }
 
 
+drop {
+   border-bottom: solid 1px var(--Trees);
+}
+
+section.bulletin p {
+    border-top: solid 1px var(--Trees);
+    border-bottom: solid 1px var(--Trees);
+    margin: 2em;
+    text-align: center;
+}
+
+section.contact p, section.intro p {
+  text-align: center;
+  padding: 0;
+}
+
+a {
+  color: var(--Trees);
+}
+
+hr {
+  height: 4px; /* thickness */
+  background-color: var(--Trees); /* optional: sets the line color */
+  border: none; /* removes default border */
+}
 
 
 
@@ -172,7 +221,7 @@ p {
 @media (max-width: 650px) {
     
     .page-container {
-      margin: 0 2em;
+      margin: 0 4em;
     }
 
      header {
