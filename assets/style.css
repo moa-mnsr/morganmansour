@@ -37,17 +37,17 @@
   --font-nav: "Authentic Sans", sans-serif;
 }
 
-/* Visibility of elements
-body, header, nav, main, div, section, h1, p {
+Visibility of elrements
+body, header, nav, main, section {
         border: 1px solid red;
 
 }
 
-div, section, h1, p {
-  border-style: dotted;
+div, h1, h2, h3, h4, p, ul, details, summary, li {
+  border: 1px dotted red;
 }
 
-*/
+
 
 * {
     box-sizing: border-box;
@@ -70,14 +70,14 @@ body {
 }
 
 .page-container {
-    margin: 0 5em;
+    margin: 0 5rem;
     display: flex;
     flex-direction: column;
 }
 
 
 header {
-    margin: 6em 0 0 0;
+    margin: 6rem 0 0 0;
   }
 
 .title-container {
@@ -87,8 +87,8 @@ header {
 
 
 .name {
-    font-size: 2.5em;;
-    margin: 1em 0;
+    font-size: 2.5rem;;
+    margin: 1rem 0;
     font-weight: 200;
 }
 
@@ -110,7 +110,7 @@ nav, .nav-container {
 
 nav {
     flex-direction: column;
-     margin: 5em 0;
+     margin: 5rem 0;
 }
 
 
@@ -126,12 +126,12 @@ nav {
     text-align: center;
     
     border: 1px solid var(--Trees);
-    border-radius: 4em;
+    border-radius: 4rem;
     
-    width: 18em;
-    height: 14em;
+    width: 18rem;
+    height: 14rem;
     
-    margin: 0 2em;
+    margin: 0 2rem;
     
  }
 
@@ -145,46 +145,47 @@ nav {
 
 .project {
     border: 1px solid var(--Trees);
-    margin: 1em;
+    margin: 1rem;
 }
 
 h1 {
    font-weight: 200;
-    margin: 1em 0;
+    margin: 1rem 0;
 } 
 
 
 main {
-          margin: 1em 0;
+          margin: 1rem 0;
 }
 
 h2 {
   font-weight: 200;
   text-transform: uppercase;
-  margin: 1em 0;
+  margin: 1rem 0;
    text-align: center;
 
  
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 
 h3 {
-  font-size: 2em;
+  font-size: 2rem;
   text-transform: uppercase;
-  margin: 1em 0;
+  margin: 1rem 0;
    text-align: center;
 }
  
 div.drop {
-  padding: 0 1em;
+  padding: 0 1rem;
   text-align: center;
+  line-height: 1.5;
 }
 
 p {
   font-weight: 100;
-  font-size: 1em;
+  font-size: 1rem;
   line-height: 1.5;
-  padding: 1em; 
+  padding: 1rem; 
  
 }
 
@@ -193,10 +194,18 @@ drop {
    border-bottom: solid 1px var(--Trees);
 }
 
+div.project-detail {
+  font-weight: 100;
+}
+
+h4, div.project-detail {
+  text-align: left;
+}
+
 section.bulletin p {
     border-top: solid 1px var(--Trees);
     border-bottom: solid 1px var(--Trees);
-    margin: 2em;
+    margin: 2rem;
     text-align: center;
 }
 
@@ -212,7 +221,7 @@ a {
 hr {
   height: 4px; /* thickness */
   background-color: var(--Trees); /* optional: sets the line color */
-  border: none; /* removes default border */
+  border: none; /* rremoves default border */
 }
 
 
@@ -221,15 +230,15 @@ hr {
 @media (max-width: 650px) {
     
     .page-container {
-      margin: 0 4em;
+      margin: 0 4rem;
     }
 
      header {
-        margin: 2em 0 1em 0;      
+        margin: 2rem 0 1rem 0;      
      }
 
      .name {
-       margin: 1em 0 .5em 0;
+       margin: 1rem 0 .5rem 0;
      }
 
       nav {
@@ -241,7 +250,7 @@ hr {
           display: flex;
           flex-direction: column;
           justify-content: center;
-          align-items: center;
+          align-itrems: center;
         }
 
         
@@ -250,13 +259,13 @@ hr {
         }
 
         .button {
-          height: 3em;
-          width: 15em;
-          margin: .5em 0;
+          height: 3rem;
+          width: 15rem;
+          margin: .5rem 0;
         }
 
         main {
-          margin: 1.5em 0;
+          margin: 1.5rem 0;
         }
         
     }
