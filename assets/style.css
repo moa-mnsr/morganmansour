@@ -37,22 +37,6 @@
   --font-nav: "Authentic Sans", sans-serif;
 }
 
-/* ---- Visibility of elrements ---- */
-
-/*
-
-
-body, header, nav, main, section {
-        border: 1px solid red;
-
-}
-
-div, h1, h2, h3, h4, p, ul, details, summary, li {
-  border: 1px dotted red;
-}
-
-*/
-
 
 
 * {
@@ -69,22 +53,26 @@ body {
     font-optical-sizing: auto;
     font-weight: 200;
     font-style: normal;
-    width: 100vw;
-    height: 100vh;
 
    
 }
 
 .page-container {
-    margin: 0 5rem;
+    height: 99vh;
+    margin: 3rem;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 /* ---- HEADER ---- including title elements */
 
 header {
-    margin: 6rem 0 0 0;
+    margin: 1rem 0;
+    padding: 1em;
+    border: 4px solid var(--Trees);
+    /* text-align: center; */
+    line-height: 1.25;
   }
 
 
@@ -100,110 +88,21 @@ header {
     font-weight: 200;
 }
 
-.name, h1 {
+.name {
     text-transform: uppercase;
 }
-
-.name {
-text-align: center;
-}
-
 
 
 /* --- MAIN ---- including two sections */
 
 
-
-main {
-    margin: 1rem 0;
-}
-
-/* h1 as section titles */
-
-h1 {
-   font-weight: 200;
-   font-size: 2rem;
-   margin: 1rem 0;
-} 
-
-
-h1 {
-  text-align: center;
-}
-
-
-/* section 1 */
-
-.projects-container {
+main div.flex-container {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    gap: 2rem;
 }
 
-
-h2 {
-  font-weight: 200;
-  text-transform: uppercase;
-  margin: 1rem 0;
-   text-align: center;
-
- 
-  font-size: 1.5rem;
-}
-
-h3 {
-  font-size: 2rem;
-  text-transform: uppercase;
-  margin: 1rem 0;
-   text-align: center;
-}
- 
-
-
-
-div.drop {
-  padding: 0 1rem;
-  text-align: center;
-  line-height: 1.5;
-}
-
-section.intro p {
-  font-weight: 100;
-  font-size: 1rem;
-  line-height: 2;
-}
-
-div.projects-container {
-  font-weight: 100;
-  font-size: 1rem;
-  line-height: 1.5;
-  padding: 1rem; 
- 
-}
-
-section.status p {
-  font-weight: 100;
-  font-size: 1rem;
-  line-height: 1.75;
-  padding: 1rem;
-}
-
-
-drop {
-   border-bottom: solid 1px var(--Trees);
-}
-
-div.project-detail {
-  font-weight: 100;
-}
-
-h4, div.project-detail {
-  text-align: left;
-}
-
-
-
-section.contact p, section.intro p {
+section.contact p {
   text-align: center;
   padding: 3em 0;
   margin: 1em;
@@ -213,54 +112,18 @@ a {
   color: var(--Trees);
 }
 
-hr {
-  height: 4px; /* thickness */
-  background-color: var(--Trees); /* optional: sets the line color */
-  border: none; /* rremoves default border */
+.project-container {
+  margin: 3rem 0;
 }
 
 
 
-
-@media (max-width: 650px) {
+/* Desktop - row layout */
+@media (min-width: 768px) {
+    main div.flex-container {
+        flex-direction: row;
+        align-items: flex-start; /* Align items to top */
+    }
     
-    .page-container {
-      margin: 0 1rem;
-    }
 
-     header {
-        margin: 2rem 0 1rem 0;      
-     }
-
-     .name {
-       margin: 1rem 0 .5rem 0;
-     }
-
-      nav {
-        display: flex;
-            justify-content: center;
-        }
-
-        .nav-container {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        
-        nav {
-          margin: 0;
-        }
-
-        .button {
-          height: 3rem;
-          width: 15rem;
-          margin: .5rem 0;
-        }
-
-        main {
-          margin: 1rem 1.5rem;
-        }
-        
-    }
+}
