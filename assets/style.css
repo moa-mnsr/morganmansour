@@ -30,6 +30,7 @@
 
 /* --- COLOR & FONT VARIABLES --- */
 :root {
+  --Shade: #1e3c32;
   --Trees: #2A5241;
   --Clouds: #F1F1F1;
   --Ash: #444444;
@@ -42,6 +43,7 @@
 * {
   box-sizing: border-box;
 }
+
 
 
 /* body as vertical flex container to center the page */
@@ -121,9 +123,26 @@ footer {
 
 a {
   color: var(--Trees);
-
+  text-decoration: none;
+  padding: 7px 3px 4px 3px;
+  border-bottom: 3px solid var(--Trees);
 }
 
+a, details {
+  transition: all 0.25s ease-in-out;
+}
+
+a:hover {
+  color: var(--Cream);
+  background-color: var(--Shade); 
+}
+
+details:hover {
+  cursor: pointer;
+  font-weight: 300;
+  color: var(--Shade); 
+
+}
 
 details summary {
   list-style: none;
@@ -163,6 +182,9 @@ details {
 
 /* For small screens like SE */
 @media (max-width: 375px) {
+header {
+  padding: 3em 0;
+}
   main {
     padding: 2rem 3rem 2rem 3.5rem;
     /* slightly more left padding */
@@ -171,6 +193,16 @@ details {
   footer {
     font-size: 1.1rem;
     padding: 2.5rem 0;
+  }
+}
+
+@media (min-width: 410px) and (max-width: 525px) {
+  .name {
+    font-size: 2.5rem;
+  }
+  
+  header {
+    padding: 3.5rem 0;
   }
 }
 
@@ -205,7 +237,8 @@ details {
 /* Desktop */
 @media (min-width: 1024px) {
   main p {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    line-height: 2;
   }
 
   main {
