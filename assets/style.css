@@ -58,31 +58,26 @@ body {
 }
 
 .page-container {
-    height: 99vh;
-    margin: 3rem;
+
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
+
 }
 
 /* ---- HEADER ---- including title elements */
 
 header {
-    margin: 1rem 0;
-    /* padding: 1em; */
-    /* border: 4px solid var(--Trees); */
-    /* text-align: center; */
+    border-bottom: 4px solid var(--Trees);
+    padding: 4rem;
     line-height: 1.25;
-    width: fit-content;
   }
 
 
 .title-container {
     display: flex;
     flex-direction: column;
-    /* text-align: center; */
+ 
 }
-
 
 .name {
     font-size: 3rem;
@@ -92,24 +87,23 @@ header {
 
 .name {
     text-transform: uppercase;
-    /* text-align: center; */
 }
 
 
 /* --- MAIN ---- including two sections */
 
-
-main div.flex-container {
-    display: flex;
-    flex-direction: column;
-    /* gap: 2rem; */
-    /* border: 1px solid; */
+main {
+     border-bottom: 4px solid var(--Trees);
+       padding: 4rem;
 }
+
+
+
 
 section.contact p {
   /* text-align: center; */
-  padding: 3em 0;
-  margin: 1em;
+  /* padding: 3em 0; */
+  margin: 3em 0;
 }
 
 a {
