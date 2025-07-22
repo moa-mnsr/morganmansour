@@ -8,7 +8,7 @@
 }
 
 @font-face {
- font-family: "Authentic Sans";
+  font-family: "Authentic Sans";
   src: url("fonts/authentic-sans-90.otf") format("opentype");
   font-weight: 200;
   font-style: normal;
@@ -22,7 +22,7 @@
 }
 
 @font-face {
- font-family: "Authentic Sans";
+  font-family: "Authentic Sans";
   src: url("fonts/authentic-sans-150.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
@@ -40,94 +40,79 @@
 
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 
 /* body as vertical flex container to center the page */
 
 body {
-    background-color: var(--Clouds);
-    color: var(--Trees);
-    font-family: var(--font-nav);
-    font-optical-sizing: auto;
-    font-weight: 200;
-    font-style: normal;
+  background-color: var(--Clouds);
+  color: var(--Trees);
+  font-family: var(--font-nav);
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
 
-   
+
 }
 
 .page-container {
-
-    display: flex;
-    flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 
 }
 
 /* ---- HEADER ---- including title elements */
 
 header {
-    border-bottom: 4px solid var(--Trees);
-    padding: 4rem;
-    line-height: 1.25;
-  }
-
-
-.title-container {
-    display: flex;
-    flex-direction: column;
- 
+  text-align: center;
+  padding: 5rem 0 4rem 0;
+  border-bottom: .25rem solid var(--Trees);
+  line-height: 1.25;
 }
 
 .name {
-    font-size: 3rem;
-    margin: 1rem 0;
-    font-weight: 200;
-}
-
-.name {
-    text-transform: uppercase;
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 300;
 }
 
 
 /* --- MAIN ---- including two sections */
 
 main {
-     border-bottom: 4px solid var(--Trees);
-       padding: 4rem;
+  flex: 1;
+  overflow-y: auto;
+  border-bottom: .25rem solid var(--Trees);
+  padding: 4rem 3rem;
 }
 
 
+main p {
+      line-height: 1.25;
+    font-size: 1.25rem;
+}
 
+details {
+      text-align: center;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
 
-section.contact p {
-  /* text-align: center; */
-  /* padding: 3em 0; */
-  margin: 3em 0;
+footer {
+  display: flex;
+  width: 100vw;
+  justify-content: space-around;
+  font-weight: 300;
+  padding: 3rem 0;
+  font-size: 1.4rem;
 }
 
 a {
   color: var(--Trees);
-  text-decoration: none;
-  /* font-weight: 100; */
-}
-
-.project-container {
-  /* border-top: 2px solid; */
-  /* border-bottom: 2px solid; */
-  padding: 1rem 0rem;
-  margin: 3rem 0;
-  /* text-align: center; */
-}
-
-
-
-/* Desktop - row layout */
-@media (min-width: 768px) {
-    main div.flex-container {
-        flex-direction: row;
-        align-items: flex-start; /* Align items to top */
-    }
-    
 
 }
+
