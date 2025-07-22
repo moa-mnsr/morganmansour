@@ -69,17 +69,20 @@ body {
 
 header {
   text-align: center;
-  padding: 5rem 0 4rem 0;
+  padding: 4rem 0;
   border-bottom: .25rem solid var(--Trees);
-  line-height: 1.25;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .name {
+  padding-top: 10px;
   text-transform: uppercase;
   font-size: 3rem;
   font-weight: 300;
+  line-height: 1;
 }
-
 
 /* --- MAIN ---- including two sections */
 
@@ -87,19 +90,24 @@ main {
   flex: 1;
   overflow-y: auto;
   border-bottom: .25rem solid var(--Trees);
-  padding: 4rem 3rem;
+  padding: 2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 
 main p {
-      line-height: 1.25;
-    font-size: 1.25rem;
+  line-height: 1.7;
+  font-size: clamp(1rem, 2.5vh, 2.4rem);
 }
 
 details {
-      text-align: center;
-    font-size: 1.5rem;
-    margin: 1rem 0;
+  text-align: center;
+  font-size: 1.7em;
+  font-weight: 200;
+  margin: .5rem 0;
 }
 
 footer {
@@ -116,3 +124,95 @@ a {
 
 }
 
+
+details summary {
+  list-style: none;
+  /* removes default arrow */
+
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+  /* removes arrow in webkit browsers */
+}
+
+details summary::before {
+  content: "+";
+  margin-right: 0.5rem;
+}
+
+details[open] summary::before {
+  content: "−";
+  /* or "×" if you prefer */
+}
+
+main p {
+  font-size: clamp(1rem, 2.5vh, 2.4rem);
+}
+
+details {
+  font-size: clamp(2rem, 4vh, 2.8rem);
+}
+
+@media (max-width: 414px) {
+  footer {
+    font-size: 1.2rem;
+    /* down from 1.4rem */
+  }
+}
+
+/* For small screens like SE */
+@media (max-width: 375px) {
+  main {
+    padding: 2rem 3rem 2rem 3.5rem;
+    /* slightly more left padding */
+  }
+
+  footer {
+    font-size: 1.1rem;
+    padding: 2.5rem 0;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+
+  main {
+    padding: 3rem 6rem;
+  }
+}
+
+/* Surface Duo - tall narrow screen */
+@media (min-width: 540px) and (max-width: 720px) and (min-height: 720px) {
+  main p {
+    font-size: 1.1rem; /* override clamp for this specific case */
+  }
+  
+  details {
+    font-size: 1.8rem; /* smaller than clamp would give */
+  }
+  
+  header {
+    padding: 3rem 0; /* reduce header padding */
+  }
+  
+  main {
+    padding: 2rem 4rem; /* adjust main padding */
+  }
+}
+
+
+/* Desktop */
+@media (min-width: 1024px) {
+  main p {
+    font-size: 2rem;
+  }
+
+  main {
+    padding: 4rem 10rem;
+  }
+
+  .name {
+    font-size: 4rem;
+  }
+}
