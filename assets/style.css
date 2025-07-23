@@ -33,7 +33,6 @@
   --Shade: #1e3c32;
   --Trees: #2A5241;
   --Clouds: #F1F1F1;
-  --Ash: #444444;
   --Cream: #fffef9;
   --font-nav: "Authentic Sans", sans-serif;
 }
@@ -128,13 +127,79 @@ a {
   border-bottom: 3px solid var(--Trees);
 }
 
+footer span {
+    padding: 7px 3px 4px 3px;
+}
+
 a, details {
   transition: all 0.25s ease-in-out;
 }
 
-a:hover {
+.drop-container {
+  margin: 1em 0;
+  transition: none;
+  font-weight: 200;
+    color: var(--Trees);
+
+}
+
+
+.drop-container:hover {
+  cursor: default;
+  font-weight: 200;
+  color: var(--Trees);
+}
+
+h1 { 
+  margin: 1em 0;
+  text-transform: uppercase;
+}
+
+
+h1, h2 {
+  font-weight: 300;
+}
+
+
+
+
+.project-container {
+  display: flex;
+  margin: 1em 0; 
+  text-align: left;
+  gap: 0.5rem;
+}
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
+.project-container span {
+  width: 1.2rem; /* Set exact width for the square */
+  margin: 0.5rem;
+}
+
+.project-container p {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.flex-container {
+  display: flex;
+}
+
+
+
+a.shade-hover:hover {
   color: var(--Cream);
   background-color: var(--Shade); 
+  border-color: var(--Clouds);
 }
 
 details:hover {
@@ -163,6 +228,13 @@ details summary::before {
 details[open] summary::before {
   content: "−";
   /* or "×" if you prefer */
+}
+
+/* inside the details drop-down space*/
+
+a.cloud-hover:hover {
+  color: var(--Shade);
+  border-color: var(--Shade);
 }
 
 main p {
