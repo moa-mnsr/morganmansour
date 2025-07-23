@@ -28,7 +28,6 @@
   font-style: normal;
 }
 
-/* --- COLOR & FONT VARIABLES --- */
 :root {
   --Shade: #1e3c32;
   --Trees: #2A5241;
@@ -37,15 +36,9 @@
   --font-nav: "Authentic Sans", sans-serif;
 }
 
-
-
 * {
   box-sizing: border-box;
 }
-
-
-
-/* body as vertical flex container to center the page */
 
 body {
   background-color: var(--Clouds);
@@ -54,8 +47,6 @@ body {
   font-optical-sizing: auto;
   font-weight: 200;
   font-style: normal;
-
-
 }
 
 .page-container {
@@ -63,10 +54,7 @@ body {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-
 }
-
-/* ---- HEADER ---- including title elements */
 
 header {
   text-align: center;
@@ -85,8 +73,6 @@ header {
   line-height: 1;
 }
 
-/* --- MAIN ---- including two sections */
-
 main {
   flex: 1;
   overflow-y: auto;
@@ -98,17 +84,118 @@ main {
   align-items: center;
 }
 
-
 main p {
   line-height: 1.7;
   font-size: clamp(1rem, 2.5vh, 2.4rem);
 }
 
+h1 { 
+  margin: 1em 0;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
 details {
   text-align: center;
-  font-size: 1.7em;
+  font-size: clamp(1.3rem, 4vh, 2.8rem);
   font-weight: 200;
   margin: .5rem 0;
+  transition: all 0.25s ease-in-out;
+}
+
+details:hover {
+  cursor: pointer;
+  font-weight: 300;
+  color: var(--Shade); 
+}
+
+details summary {
+  list-style: none;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details summary::before {
+  content: "+";
+  margin-right: 0.5rem;
+}
+
+details[open] summary::before {
+  content: "−";
+}
+
+.drop-container {
+  margin: 1em 0;
+  font-weight: 200;
+  color: var(--Trees);
+}
+
+.drop-container:hover {
+  cursor: default;
+  font-weight: 200;
+  color: var(--Trees);
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-container {
+  display: flex;
+  flex-direction: row;
+  margin: 1em 0; 
+  text-align: left;
+  gap: 0.5rem;
+}
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-container span {
+  width: 1.2rem;
+  margin: 0.25rem 0.5rem;
+}
+
+.project-container p {
+  font-size: 1rem;
+  margin: 1rem 0;
+}
+
+a {
+  color: var(--Trees);
+  text-decoration: none;
+  padding: 7px 3px 4px 3px;
+  border-bottom: 3px solid var(--Trees);
+  transition: all 0.25s ease-in-out;
+}
+
+/* Main content links - lighter underlines */
+a.cream-hover {
+  border-bottom: 2px solid var(--Trees);
+}
+
+a.cream-hover:hover {
+  background-color: var(--Cream);
+  color: var(--Shade);
+  border-color: var(--Clouds);
+}
+
+/* Footer links - heavier underlines */
+a.shade-hover:hover {
+  color: var(--Cream);
+  background-color: var(--Shade); 
+  border-color: var(--Clouds);
 }
 
 footer {
@@ -120,151 +207,29 @@ footer {
   font-size: 1.4rem;
 }
 
-a {
-  color: var(--Trees);
-  text-decoration: none;
-  padding: 7px 3px 4px 3px;
-  border-bottom: 3px solid var(--Trees);
-}
-
 footer span {
-    padding: 7px 3px 4px 3px;
+  padding: 7px 3px 4px 3px;
 }
 
-a, details {
-  transition: all 0.25s ease-in-out;
-}
-
-.drop-container {
-  margin: 1em 0;
-  transition: none;
-  font-weight: 200;
-    color: var(--Trees);
-
-}
-
-
-.drop-container:hover {
-  cursor: default;
-  font-weight: 200;
-  color: var(--Trees);
-}
-
-h1 { 
-  margin: 1em 0;
-  text-transform: uppercase;
-}
-
-
-h1, h2 {
-  font-weight: 300;
-}
-
-
-
-
-.project-container {
-  display: flex;
-  margin: 1em 0; 
-  text-align: left;
-  gap: 0.5rem;
-}
-
-.project-content {
-  display: flex;
-  flex-direction: column;
-}
-
-h2 {
-  font-size: 2rem;
-  line-height: 1.5;
-}
-
-.project-container span {
-  width: 1.2rem; /* Set exact width for the square */
-  margin: 0.5rem;
-}
-
-.project-container p {
-    font-size: 1.5rem;
-    margin: 1rem 0;
-}
-
-.flex-container {
-  display: flex;
-}
-
-
-
-a.shade-hover:hover {
-  color: var(--Cream);
-  background-color: var(--Shade); 
-  border-color: var(--Clouds);
-}
-
-details:hover {
-  cursor: pointer;
-  font-weight: 300;
-  color: var(--Shade); 
-
-}
-
-details summary {
-  list-style: none;
-  /* removes default arrow */
-
-}
-
-details summary::-webkit-details-marker {
-  display: none;
-  /* removes arrow in webkit browsers */
-}
-
-details summary::before {
-  content: "+";
-  margin-right: 0.5rem;
-}
-
-details[open] summary::before {
-  content: "−";
-  /* or "×" if you prefer */
-}
-
-/* inside the details drop-down space*/
-
-a.cloud-hover:hover {
-  color: var(--Shade);
-  border-color: var(--Shade);
-}
-
-main p {
-  font-size: clamp(1rem, 2.5vh, 2.4rem);
-}
-
-details {
-  font-size: clamp(2rem, 4vh, 2.8rem);
-}
-
-@media (max-width: 414px) {
-  footer {
-    font-size: 1.2rem;
-    /* down from 1.4rem */
-  }
-}
-
-/* For small screens like SE */
+/* Mobile */
 @media (max-width: 375px) {
-header {
-  padding: 3em 0;
-}
+  header {
+    padding: 3em 0;
+  }
+  
   main {
     padding: 2rem 3rem 2rem 3.5rem;
-    /* slightly more left padding */
   }
 
   footer {
     font-size: 1.1rem;
     padding: 2.5rem 0;
+  }
+}
+
+@media (min-width: 410px) and (max-width: 414px) {
+  footer {
+    font-size: 1.2rem;
   }
 }
 
@@ -278,46 +243,63 @@ header {
   }
 }
 
+/* Surface Duo */
+@media (min-width: 540px) and (max-width: 720px) and (min-height: 720px) {
+  main p {
+    font-size: 1.1rem;
+  }
+  
+  details {
+    font-size: 1.8rem;
+  }
+  
+  header {
+    padding: 3rem 0;
+  }
+  
+  main {
+    padding: 2rem 4rem;
+  }
+}
+
 /* Tablet */
 @media (min-width: 768px) {
-
   main {
     padding: 3rem 6rem;
   }
 }
 
-/* Surface Duo - tall narrow screen */
-@media (min-width: 540px) and (max-width: 720px) and (min-height: 720px) {
-  main p {
-    font-size: 1.1rem; /* override clamp for this specific case */
-  }
-  
-  details {
-    font-size: 1.8rem; /* smaller than clamp would give */
-  }
-  
-  header {
-    padding: 3rem 0; /* reduce header padding */
-  }
-  
-  main {
-    padding: 2rem 4rem; /* adjust main padding */
-  }
-}
-
-
 /* Desktop */
 @media (min-width: 1024px) {
-  main p {
-    font-size: 2.5rem;
-    line-height: 2;
+  .name {
+    font-size: 4rem;
   }
 
   main {
     padding: 4rem 10rem;
   }
 
-  .name {
-    font-size: 4rem;
+  main p {
+    font-size: 2.5rem;
+    line-height: 2;
   }
+
+  h1 { 
+    margin: 1em 0;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  details {
+    font-size: clamp(2rem, 4vh, 2.8rem);
+  }
+
+  .project-container p {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+  }
+
+  /* Keep main content links lighter even on desktop */
 }
