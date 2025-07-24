@@ -89,10 +89,12 @@ main p {
   font-size: clamp(1rem, 2.5vh, 2.4rem);
 }
 
-h1 { 
-  margin: 1em 0;
+h1 {
+  margin: 2.5rem 0 2rem 0;
   text-transform: uppercase;
   font-weight: 300;
+
+
 }
 
 h2 {
@@ -112,7 +114,7 @@ details {
 details:hover {
   cursor: pointer;
   font-weight: 300;
-  color: var(--Shade); 
+  color: var(--Shade);
 }
 
 details summary {
@@ -152,7 +154,7 @@ details[open] summary::before {
 .project-container {
   display: flex;
   flex-direction: row;
-  margin: 1em 0; 
+  margin: 1em 0;
   text-align: left;
   gap: 0.5rem;
 }
@@ -164,7 +166,8 @@ details[open] summary::before {
 
 .project-container span {
   width: 1.2rem;
-  margin: 0.25rem 0.5rem;
+  height: fit-content;
+  margin: 2px 6px 0 0;
 }
 
 .project-container p {
@@ -172,13 +175,19 @@ details[open] summary::before {
   margin: 1rem 0;
 }
 
+.project-content p {
+    padding: 0 0 0 3px;
+
+}
+
 a {
   color: var(--Trees);
   text-decoration: none;
-  padding: 7px 3px 4px 3px;
+  padding: 6px 3px 3px 3px;
   border-bottom: 3px solid var(--Trees);
   transition: all 0.25s ease-in-out;
 }
+
 
 /* Main content links - lighter underlines */
 a.cream-hover {
@@ -194,7 +203,7 @@ a.cream-hover:hover {
 /* Footer links - heavier underlines */
 a.shade-hover:hover {
   color: var(--Cream);
-  background-color: var(--Shade); 
+  background-color: var(--Shade);
   border-color: var(--Clouds);
 }
 
@@ -216,10 +225,12 @@ footer span {
   header {
     padding: 3em 0;
   }
-  
+
   main {
     padding: 2rem 3rem 2rem 3.5rem;
   }
+
+  /* need to widen margins for the projects in column without changing margins of main bio text on SE*/
 
   footer {
     font-size: 1.1rem;
@@ -237,7 +248,7 @@ footer span {
   .name {
     font-size: 2.5rem;
   }
-  
+
   header {
     padding: 3.5rem 0;
   }
@@ -248,15 +259,15 @@ footer span {
   main p {
     font-size: 1.1rem;
   }
-  
+
   details {
     font-size: 1.8rem;
   }
-  
+
   header {
     padding: 3rem 0;
   }
-  
+
   main {
     padding: 2rem 4rem;
   }
@@ -284,7 +295,7 @@ footer span {
     line-height: 2;
   }
 
-  h1 { 
+  h1 {
     margin: 1em 0;
   }
 
@@ -301,5 +312,19 @@ footer span {
     margin: 1rem 0;
   }
 
-  /* Keep main content links lighter even on desktop */
+  .flex-container {
+    flex-direction: row;
+    margin: 5rem 0;
+  }
+
+  .project-container {
+    margin: 0 2rem;
+    flex: 1;
+  }
+
+  .project-container span {
+    width: 2rem;
+    margin: 0.5rem 1rem;
+  }
+
 }
