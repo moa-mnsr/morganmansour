@@ -80,20 +80,20 @@ main {
   padding: 2rem 2.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
 main p {
-  line-height: 1.7;
+  line-height: 1.9;
   font-size: clamp(1rem, 2.25vh, 2.4rem);
 }
 
-h1 {
-  margin: 2.5rem 0 2rem 0;
+details summary h1 {
+  margin: 1rem 0;
   text-transform: uppercase;
   font-weight: 300;
-
+  color: var(--Trees);
 
 }
 
@@ -117,26 +117,31 @@ details:hover {
   color: var(--Shade);
 }
 
+details[open] summary h1 {
+  padding-top: 2rem; /* Only adds space when details is open */
+}
+
 details summary {
   list-style: none;
 }
+
 
 details summary::-webkit-details-marker {
   display: none;
 }
 
-details summary::before {
+details summary::after {
   content: "+";
 }
 
-details[open] summary::before {
+details[open] summary::after {
   content: "−";
 }
 
 .drop-container {
-  margin: 1em 0;
   font-weight: 200;
   color: var(--Trees);
+  margin: 1rem 0;
 }
 
 .drop-container:hover {
@@ -148,13 +153,13 @@ details[open] summary::before {
 .grid-container {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
+  gap: 0;
 }
 
 .project-container {
   display: flex;
   flex-direction: row;
-  margin: 1em 0;
+  margin: 1rem 0 2rem 0;
   text-align: left;
   gap: 0.5rem;
 }
@@ -172,12 +177,7 @@ details[open] summary::before {
 
 .project-container p {
   font-size: 1rem;
-  margin: 1rem 0;
-}
-
-.project-content p {
-    padding: 0 0 0 3px;
-
+  margin: .25rem 0;
 }
 
 a {
@@ -220,17 +220,20 @@ footer span {
   padding: 7px 3px 4px 3px;
 }
 
-/* Mobile */
+/* Mobile .. SE */
 @media (max-width: 375px) {
   header {
     padding: 2rem 0;
   }
 
   main {
-    padding: 2rem 3rem 1rem 3.25rem;
-  }
+  padding: 2rem 3rem 1.5rem 3.25rem  
+}
 
-  /* need to widen margins for the projects in column without changing margins of main bio text on SE*/
+ h1 {
+  font-size: 1.5rem;
+ }
+
 
   footer {
     font-size: 1.1rem;
@@ -342,10 +345,6 @@ footer span {
     margin: 1rem 0;
   }
 
-  .grid-container {
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem 3rem;
-  }
 
   .project-container {
     margin: 0 2rem;
