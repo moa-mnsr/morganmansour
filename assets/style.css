@@ -77,16 +77,16 @@ main {
   flex: 1;
   overflow-y: auto;
   border-bottom: .25rem solid var(--Trees);
-  padding: 2rem 2.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
 
-main p {
-  line-height: 1.9;
-  font-size: clamp(1rem, 2.25vh, 2.4rem);
+main p.bio {
+  padding: 0 0 0 1.25rem;
+  line-height: 1.2;
+  font-size: clamp(1.5rem, 2.25vh, 2.4rem);
 }
 
 details summary h1 {
@@ -107,7 +107,7 @@ details {
   text-align: center;
   font-size: clamp(1.3rem, 4vh, 2.8rem);
   font-weight: 200;
-  margin: .5rem 0;
+  margin: .5rem 3rem;
   transition: all 0.25s ease-in-out;
 }
 
@@ -161,7 +161,7 @@ details[open] summary::after {
   flex-direction: row;
   margin: 1rem 0 2rem 0;
   text-align: left;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 .project-content {
@@ -227,7 +227,7 @@ footer span {
   }
 
   main {
-  padding: 2rem 3rem 1.5rem 3.25rem  
+  padding: 1rem;
 }
 
  h1 {
@@ -257,7 +257,7 @@ footer span {
     padding: 3rem 0;
   }
 
-  main p {
+  main p.bio {
     padding: .75rem 1.25rem;
   }
 
@@ -289,7 +289,7 @@ footer span {
 
 /* Surface Duo */
 @media (min-width: 540px) and (max-width: 720px) and (min-height: 720px) {
-  main p {
+  main p.bio {
     font-size: 1.1rem;
   }
 
@@ -320,10 +320,10 @@ footer span {
   }
 
   main {
-    padding: 4rem 10rem;
+    padding: 2rem 10rem 3rem 10rem;
   }
 
-  main p {
+  main p.bio {
     font-size: 2.5rem;
     line-height: 2;
   }
@@ -338,6 +338,7 @@ footer span {
 
   details {
     font-size: clamp(2rem, 4vh, 2.8rem);
+    margin-top: 4.5rem;
   }
 
   .project-container p {
@@ -347,7 +348,7 @@ footer span {
 
 
   .project-container {
-    margin: 0 2rem;
+    margin: 2.5rem 2rem;
     flex: 1;
   }
 
