@@ -62,7 +62,7 @@ body {
 
 header {
   text-align: center;
-  padding: 4rem 0;
+  padding: 2rem 0;
   border-bottom: .25rem solid var(--Trees);
   display: flex;
   align-items: center;
@@ -84,6 +84,8 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+    padding: 0 1rem; /* Just a gentle base */
+
 }
 
 article {
@@ -91,14 +93,14 @@ article {
 }
 
 .down-arrow {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 4.5vh, 3rem);
   text-align: center;
 }
 
 .bio p {
 
   line-height: 1.5;
-  font-size: clamp(1.5rem, 2.25vh, 2.4rem);
+  font-size: clamp(1.5rem, 3.54vh, 3rem);
 }
 
 article p {
@@ -163,19 +165,18 @@ a.shade-hover:hover {
   border-top: thick double;
   display: flex;
   justify-content: space-evenly;
-  margin: 1rem 0 0 0;
-  padding: 2.5rem 2rem;
+  margin: 1rem -1rem 0 -1rem; /* consolidated margins */
+  padding: 2.5rem 1rem; /* consolidated padding */
 }
 
-
 .projects-heading {
-    border-bottom: thick double;
-    padding: 2rem;
-    margin-top: 2rem;
-    position: sticky;
-    top: 0;
-    background-color: var(--Clouds);
-    z-index: 10;
+  border-bottom: thick double;
+  margin: 2rem -1rem 0 -1rem; /* consolidated margins */
+  padding: 2rem 1rem; /* consolidated padding */
+  position: sticky;
+  top: 0;
+  background-color: var(--Clouds);
+  z-index: 10;
 }
 
 .projects-container {
@@ -223,31 +224,20 @@ footer {
   width: 100vw;
   justify-content: space-around;
   font-weight: 300;
-  padding: 3rem 0;
-  font-size: 1.4rem;
+   font-size: 1.1rem;
+    padding: 2rem 0;
 }
 
 footer span {
   padding: 7px 3px 4px 3px;
 }
 
-/* Mobile .. SE */
-@media (max-width: 375px) {
-  header {
-    padding: 2rem 0;
-  }
 
   main section {
-  margin: 2rem 1rem 1rem 2.25rem
+  margin: 3rem 1rem 3.25rem 2.25rem;
 }
 
 
-
-  footer {
-    font-size: 1.1rem;
-    padding: 2rem 0;
-  }
-}
 
 @media (min-width: 410px) and (max-width: 414px) {
   footer {
