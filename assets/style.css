@@ -56,6 +56,10 @@ body {
   flex-direction: column;
 }
 
+  .dropdown-icon {
+  margin-right: 0.5rem;
+}
+
 header {
   text-align: center;
   padding: 4rem 0;
@@ -80,107 +84,55 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center;
 }
 
-main p.bio {
-  padding: 0 0 0 1.25rem;
-  line-height: 1.2;
+article {
+  margin: 1rem 0;
+}
+
+.down-arrow {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.bio p {
+
+  line-height: 1.5;
   font-size: clamp(1.5rem, 2.25vh, 2.4rem);
 }
 
-details summary h1 {
-  margin: 1rem 0;
+article p {
+    margin: 1rem 1rem 0 0;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+  h1 {
+  text-align: center;
   text-transform: uppercase;
+  font-size: 1.5rem;
   font-weight: 300;
-  color: var(--Trees);
 
 }
 
 h2 {
-  font-size: 1.1rem;
+  cursor: pointer;
+  font-size: 1.5rem;
   line-height: 1.5;
   font-weight: 300;
 }
 
-details {
-  text-align: center;
-  font-size: clamp(1.3rem, 4vh, 2.8rem);
-  font-weight: 200;
-  margin: .5rem 3rem;
-  transition: all 0.25s ease-in-out;
-}
 
-details:hover {
-  cursor: pointer;
-  font-weight: 300;
-  color: var(--Shade);
-}
-
-details[open] summary h1 {
-  padding-top: 2rem; /* Only adds space when details is open */
-}
-
-details summary {
-  list-style: none;
-}
-
-
-details summary::-webkit-details-marker {
-  display: none;
-}
-
-details summary::after {
-  content: "+";
-}
-
-details[open] summary::after {
-  content: "−";
-}
-
-.drop-container {
-  font-weight: 200;
-  color: var(--Trees);
-  margin: 1rem 0;
-}
-
-.drop-container:hover {
-  cursor: default;
-  font-weight: 200;
-  color: var(--Trees);
-}
-
-.grid-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0;
-}
-
-.project-container {
-  display: flex;
-  flex-direction: row;
-  margin: 1rem 0 2rem 0;
-  text-align: left;
-  gap: 1rem;
-}
 
 .project-content {
   display: flex;
   flex-direction: column;
+  margin-bottom: 2rem; /* Reserve space even when content is hidden */
 }
 
-.project-container span {
-  width: 1.2rem;
-  height: fit-content;
-  margin: 2px 6px 0 0;
-}
 
-.project-container p {
-  font-size: 1rem;
-  margin: .25rem 0;
-}
 
-a {
+a.cream-hover, a.shade-hover {
   color: var(--Trees);
   text-decoration: none;
   padding: 6px 3px 3px 3px;
@@ -207,6 +159,65 @@ a.shade-hover:hover {
   border-color: var(--Clouds);
 }
 
+.download-flex {
+  border-top: thick double;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1rem 0 0 0;
+  padding: 2.5rem 2rem;
+}
+
+
+.projects-heading {
+    border-bottom: thick double;
+    padding: 2rem;
+    margin-top: 2rem;
+    position: sticky;
+    top: 0;
+    background-color: var(--Clouds);
+    z-index: 10;
+}
+
+.projects-container {
+position: relative;
+
+}
+
+span.bolder-title {
+  font-weight: 400;
+  padding: 1px 0 0 0;
+}
+
+a.cv {
+  
+  color: var(--Trees);
+  text-decoration: none;
+  padding: 1px;
+  border: none; /* Remove this line or set to none */
+  transition: all 0.25s ease-in-out; 
+}
+
+/* Add this new rule */
+a.cv .cv-text {
+  border-bottom: 1px solid var(--Trees);
+  padding-bottom: 1px;
+}
+
+.cv-text {
+  font-weight: 300;
+}
+
+/* Update hover effect if you have one */
+a.cv:hover .cv-text {
+  background-color: var(--Cream);
+  color: var(--Shade);
+  border-color: var(--Shade);
+}
+
+.download-arrow {
+  padding: 0 7px 0 0;
+}
+
 footer {
   display: flex;
   width: 100vw;
@@ -226,13 +237,10 @@ footer span {
     padding: 2rem 0;
   }
 
-  main {
-  padding: 1rem;
+  main section {
+  margin: 2rem 1rem 1rem 2.25rem
 }
 
- h1 {
-  font-size: 1.5rem;
- }
 
 
   footer {
@@ -261,25 +269,8 @@ footer span {
     padding: .75rem 1.25rem;
   }
 
-  h1 {
-    font-size: 2rem;
-  }
 
-  h2 {
-    line-height: 1.4;
-    font-size: 1.25rem;
-  }
 
-  .project-container {
-    gap: 1.1rem;
-    margin: 1.24rem 0;
-    
-  }
-
-  .project-container span {
-  font-size: 1.75rem;
-  margin: 3px 7px 0 0;
-}
 
 .project-content p {
  font-size: 1.1rem;
@@ -291,10 +282,6 @@ footer span {
 @media (min-width: 540px) and (max-width: 720px) and (min-height: 720px) {
   main p.bio {
     font-size: 1.1rem;
-  }
-
-  details {
-    font-size: 1.8rem;
   }
 
   header {
@@ -328,33 +315,6 @@ footer span {
     line-height: 2;
   }
 
-  h1 {
-    margin: 1em 0;
-  }
-
-  h2 {
-    font-size: 2rem;
-  }
-
-  details {
-    font-size: clamp(2rem, 4vh, 2.8rem);
-    margin-top: 4.5rem;
-  }
-
-  .project-container p {
-    font-size: 1.5rem;
-    margin: 1rem 0;
-  }
-
-
-  .project-container {
-    margin: 2.5rem 2rem;
-    flex: 1;
-  }
-
-  .project-container span {
-    width: 2rem;
-    margin: 0.5rem 1rem;
-  }
+ 
 
 }
