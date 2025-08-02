@@ -24,7 +24,7 @@ projectTitles.forEach(function (title) {
 projectTitles.forEach(function(title, index) {
 
     const projectContent = title.parentElement.querySelector('p');
-    if (index === 0 || index === 3) { // First (Design & Code) and last (Teaching & Community)
+    if (index === 0 || index === 1) { // which categories are open
         projectContent.style.display = 'block';
         const icon = title.querySelector('.dropdown-icon');
         icon.textContent = '▩';

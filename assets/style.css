@@ -100,7 +100,7 @@ article {
 .bio p {
 
   line-height: 1.5;
-  font-size: clamp(1.5rem, 3.54vh, 3rem);
+  font-size: clamp(1.5rem, 4vh, 3rem);
 }
 
 article p {
@@ -142,10 +142,12 @@ a.cream-hover, a.shade-hover {
   transition: all 0.25s ease-in-out;
 }
 
-
-/* Main content links - lighter underlines */
-a.cream-hover {
+.bio a.cream-hover {
   border-bottom: 2px solid var(--Trees);
+}
+/* Main content links - lighter underlines */
+.projects a.cream-hover {
+  border-bottom: 1.5px solid var(--Trees);
 }
 
 a.cream-hover:hover {
@@ -234,7 +236,7 @@ footer span {
 
 
   main section {
-  margin: 3rem 1rem 3.25rem 2.25rem;
+  margin: 2.25rem 1rem 1rem 2.25rem;
 }
 
 
