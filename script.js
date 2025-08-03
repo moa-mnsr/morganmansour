@@ -11,23 +11,23 @@ projectTitles.forEach(function (title) {
 
         if (isOpen) {
             projectContent.style.display = 'none';
-            icon.textContent = '▧';
+            icon.textContent = '⏵';
         } else {
             projectContent.style.display = 'block';
-            icon.textContent = '▩';
+            icon.textContent = '⏷';
         }
 
     });
 });
-
+ 
 
 projectTitles.forEach(function(title, index) {
 
     const projectContent = title.parentElement.querySelector('p');
-    if (index === 0 || index === 1) { // which categories are open
+    if (index === 0) { // which categories are open
         projectContent.style.display = 'block';
         const icon = title.querySelector('.dropdown-icon');
-        icon.textContent = '▩';
+        icon.textContent = '⏷';
     }else {
         projectContent.style.display = 'none';
     }
@@ -47,7 +47,7 @@ downArrow.addEventListener('click', function() {
     const projectsPosition = projectsContainer.offsetTop;
     console.log('Projects container position:', projectsPosition);
 
-    const paddingTop = 150;
+    const paddingTop = 85;
     const targetScroll = projectsPosition - paddingTop; // Keep only this one
     console.log('Target scroll:', targetScroll);
     
