@@ -97,7 +97,10 @@ article {
   text-align: center;
 }
 
-.bio p {padding: 2rem 1rem 3rem 2rem;line-height: 2;font-size: clamp(1rem, 3vh, 3rem);}
+.bio p {
+  padding: 2.5rem 1rem 2.5rem 2rem;
+  line-height: 2;
+  font-size: clamp(1rem, 3vh, 3rem);}
 
 article p {
     margin: 1rem 1rem 0 0;
