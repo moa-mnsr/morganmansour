@@ -169,7 +169,7 @@ a.shade-hover:hover {
 
 .projects-heading {
   border-bottom: thick double var(--Trees);
-  margin: 2rem -1rem 0 -1rem; /* consolidated margins */
+  margin: 2.25rem -1rem 0 -1rem; /* consolidated margins */
   padding: 2rem 1rem; /* consolidated padding */
   position: sticky;
   top: 0;
@@ -232,7 +232,7 @@ footer span {
 
 
   main section {
-  margin: 2.25rem 1rem 1rem 2.25rem;
+  margin: 2.25rem 1rem .5rem 2.25rem;
 }
 
 
