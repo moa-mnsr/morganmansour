@@ -40,6 +40,8 @@
   box-sizing: border-box;
 }
 
+/* Small mobile base styles, ex. iPhone SE */
+
 body {
   background-color: var(--Clouds);
   color: var(--Trees);
@@ -62,11 +64,14 @@ body {
 
 header {
   text-align: center;
-  padding: 2rem 0;
   border-bottom: .25rem solid var(--Trees);
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.header-content {
+    padding: 2rem 0;
 }
 
 .name {
@@ -80,12 +85,9 @@ header {
 main {
   flex: 1;
   overflow-y: auto;
-  border-bottom: .25rem solid var(--Trees);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-    padding: 0 1rem; /* Just a gentle base */
-
 }
 
 article {
@@ -98,9 +100,10 @@ article {
 }
 
 .bio p {
-  padding: 2.5rem 1rem 2.5rem 2rem;
-  line-height: 2;
-  font-size: 1.25rem;}
+    padding: 4rem 2rem 3.5rem 1rem;
+    line-height: 2;
+    font-size: 1.25rem;
+}
 
 article p {
     margin: 1rem 1rem 0 0;
@@ -144,6 +147,7 @@ a.cream-hover, a.shade-hover {
 .bio a.cream-hover {
   border-bottom: 2px solid var(--Trees);
 }
+
 /* Main content links - lighter underlines */
 .projects a.cream-hover {
   border-bottom: 1.5px solid var(--Trees);
@@ -166,14 +170,14 @@ a.shade-hover:hover {
   border-top: thick double var(--Trees);
   display: flex;
   justify-content: space-evenly;
-  margin: 1rem -1rem 0 -1rem; /* consolidated margins */
-  padding: 2.5rem 1rem; /* consolidated padding */
+  margin: 1rem 0 0 0;  
+  padding: 2.5rem 1rem; 
 }
 
 .projects-heading {
   border-bottom: thick double var(--Trees);
-  margin: 2.25rem -1rem 0 -1rem; /* consolidated margins */
-  padding: 2rem 1rem; /* consolidated padding */
+  margin: 2.25rem 0 0 0;  
+  padding: 2rem 1rem;
   position: sticky;
   top: 0;
   background-color: var(--Clouds);
@@ -195,11 +199,10 @@ a.cv {
   color: var(--Trees);
   text-decoration: none;
   padding: 1px;
-  border: none; /* Remove this line or set to none */
+  border: none; 
   transition: all 0.25s ease-in-out; 
 }
 
-/* Add this new rule */
 a.cv .cv-text {
   border-bottom: 1px solid var(--Trees);
   padding-bottom: 1px;
@@ -209,7 +212,6 @@ a.cv .cv-text {
   font-weight: 300;
 }
 
-/* Update hover effect if you have one */
 a.cv:hover .cv-text {
   background-color: var(--Cream);
   color: var(--Shade);
@@ -221,8 +223,15 @@ a.cv:hover .cv-text {
 }
 
 footer {
-  display: flex;
+  
   width: 100vw;
+  
+      border-top: .25rem solid var(--Trees);
+
+}
+
+.footer-content {
+  display: flex;
   justify-content: space-around;
   font-weight: 300;
    font-size: 1.1rem;
@@ -235,16 +244,77 @@ footer span {
 
 
   main section {
-  margin: 2.25rem 1rem .5rem 2.25rem;
+  padding: 2.25rem 1rem .5rem 2.25rem;
+  margin: 0;
 }
 
-@media (min-width: 414px) {
-  header {
-    padding: 3rem 0; /* increased from 2rem 0 */
+/* thin but tall screens, ex. iPhone 12 Pro */
+
+@media (min-width: 376px) and (max-width: 413px) {
+  .header-content {
+    padding: 3rem 0; 
   }
 
   main section {
-    margin: 3rem 0;
+    margin: 4.25rem 1rem 5.5rem 2.25rem;
+  }
+
+  .bio p {
+    padding: 0;
+    font-size: 1.5rem;
+  }
+
+  .projects-heading {
+    padding: 3rem 1rem;
+  }
+}
+
+/* Samsung Galaxy S8+ */
+@media (min-width: 360px) and (max-width: 375px) and (min-height: 740px) {
+  .header-content {
+    padding: 2.25rem 0;
+  }
+  
+  main section {
+    margin: 2rem .5rem 1rem 1.5rem;
+}
+
+.bio p {
+    font-size: 1.4rem;
+    line-height: 2;
+    padding: 2.5rem .5rem 3.5rem 1.5rem;
+}
+
+.projects-heading {
+  margin: 3rem -1rem 0 -1rem;
+}
+
+}
+
+@media (min-width: 412px) and (max-width: 412px) and (min-height: 900px) {
+  main section {
+    margin: 6rem 0;
+  }
+  
+  .bio p {
+    padding: 0 0 .5rem 1rem;
+    font-size: 1.8rem;
+    line-height: 2;
+  }
+
+  .projects-heading {
+    padding: 3.5rem 1rem;
+}
+}
+
+@media (min-width: 414px) {
+  .header-content {
+    padding: 3rem 0; 
+  }
+
+  main section {
+    padding: 3rem 1rem;
+    margin: 0;
   }
   
   .bio p {
@@ -253,11 +323,158 @@ footer span {
   }
   
   .down-arrow {
-    font-size: clamp(1.5rem, 3.5vh, 3rem); /* reduced from 4.5vh */
+    font-size: clamp(1.5rem, 3.5vh, 3rem); 
   }
   
   .projects-container {
-    margin: 4.25rem -1rem 0 -1rem;
+    margin: 4.25rem 0 0 0;
   }
   
+}
+
+@media (min-width: 415px) and (max-width: 430px) {
+  .bio p {
+    font-size: 1.75rem;
+    padding: 3rem 2.5rem 3.5rem 3rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .name {
+    font-size: 2.5rem;
+  }
+  
+  .bio p {
+    font-size: 2rem;
+    padding: 4rem 2rem 3rem 2.5rem;
+  }
+  
+  h1 {
+    font-size: 1.75rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  article p {
+    font-size: 1.1rem;
+    line-height: 1.9;
+  }
+  
+  .projects-heading {
+    padding: 4rem 1rem 2.5rem 1rem;
+  }
+  
+  .footer-content {
+    font-size: 1.3rem;
+    padding: 2.5rem 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .header-content {
+    padding: 4rem 0;
+  }
+  
+  .name {
+    padding-top: 15px;
+    font-size: 3rem;
+  }
+  
+  .bio p {
+    font-size: 2.5rem;
+    padding: 5rem 0 2.75rem 3rem;
+  }
+  
+  .down-arrow {
+    font-size: 3rem;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  .projects-heading {
+    padding: 5rem 0 3rem 0;
+  }
+
+  footer {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    font-weight: 300;
+    font-size: 1.6rem;
+    padding: 3rem 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+
+.name {
+    padding-top: 15px;
+    font-size: 4rem;
+}
+
+main section {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  
+
+  .bio p {
+    font-size: 3rem;
+    padding: 3rem 0 2rem 3rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+footer {
+    font-size: 2rem;
+    padding: 3.5rem 0;
+}
+
+}
+@media (min-width: 1024px) {
+
+  header,
+  footer {
+    display: block; 
+  }
+
+  .header-content,
+  main,
+  .footer-content {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .header-content {
+    padding: 4.5rem 0;
+  }
+  .name {
+    padding-top: 20px;
+    font-size: 4.5rem;
+  }
+
+  .bio p {
+    font-size: 3.3rem;
+    padding: 7rem 0 8rem 3.5rem;
+  }
+  .down-arrow {
+    font-size: 4rem;
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: space-around;
+  }
+  footer {
+    font-size: 2.3rem;
+    padding: 4rem 0;
+  }
 }
