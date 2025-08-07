@@ -58,6 +58,14 @@ body {
   flex-direction: column;
 }
 
+/* Fallback for older browsers that don't support dvh */
+@supports not (height: 100dvh) {
+  .page-container {
+    height: 100vh;
+    min-height: 100vh;
+  }
+}
+
 .dropdown-icon {
   margin-right: 1.25rem;
 }
