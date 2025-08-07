@@ -230,7 +230,8 @@ a.cv {
 
 a.cv .cv-text {
   border-bottom: 1px solid var(--Trees);
-  padding-bottom: 1px;
+  padding: 3px 1px 1px 1px;
+
 }
 
 .cv-text {
@@ -238,9 +239,11 @@ a.cv .cv-text {
 }
 
 a.cv:hover .cv-text {
-  background-color: var(--Cream);
-  color: var(--Shade);
-  border-color: var(--Shade);
+  background-color: var(--Shade);
+  color: var(--Cream);
+  border-color: var(--Clouds);
+  text-decoration: none;
+  transition: all 0.25s ease-in-out;
 }
 
 .download-arrow {
