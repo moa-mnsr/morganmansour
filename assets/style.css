@@ -118,9 +118,10 @@ article {
 }
 
 .bio p {
-	padding: 1.5rem 2rem 2rem 1rem;
-	line-height: 2;
-	font-size: 1.25rem;
+    padding: 2rem 2rem 1rem 1rem;
+    line-height: 2;
+    margin: 0 0 2rem 0;
+    font-size: 1.25rem;
 }
 
 article p {
@@ -209,7 +210,7 @@ a.shade-hover:hover {
 
 .projects-container {
   position: relative;
-  margin: 2.25rem 0 0 0;
+  margin: 3.5rem 0 0 0;
 
 
 }
@@ -547,9 +548,11 @@ footer span {
     font-size: 4rem;
   }
 
+ 
+
  .bio p {
     font-size: 3rem;
-    padding: 4rem 1rem 4rem 2.5rem;
+    padding: 5rem 1rem 3rem 2.5rem;
 }
 
   .down-arrow {
@@ -557,7 +560,7 @@ footer span {
   }
 
    .projects-container {
-    margin-top: 2.25rem;
+    margin-top: 4rem;
   }
 
   .projects-heading {
