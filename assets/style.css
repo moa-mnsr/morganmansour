@@ -90,9 +90,13 @@ main {
   justify-content: space-evenly;
 }
 
+/*
+main section.bio {
+  margin-top: 4rem;
+}*/
+
 main section {
   padding: 2.25rem 1rem .5rem 2.25rem;
-  margin: 0;
 }
 
 article {
@@ -188,8 +192,7 @@ a.shade-hover:hover {
 
 .projects-heading {
   border-bottom: thick double var(--Trees);
-  margin: 2.25rem 0 0 0;
-  padding: 2rem 1rem;
+  padding: 1rem 0;
   position: sticky;
   top: 0;
   background-color: var(--Clouds);
@@ -198,6 +201,8 @@ a.shade-hover:hover {
 
 .projects-container {
   position: relative;
+  margin: 2.25rem 0 0 0;
+
 
 }
 
