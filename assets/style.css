@@ -71,7 +71,7 @@ header {
 }
 
 .header-content {
-  padding: 2rem 0;
+  padding: 1.5rem 0;
 }
 
 .name {
@@ -243,7 +243,7 @@ footer {
   justify-content: space-around;
   font-weight: 300;
   font-size: 1.1rem;
-  padding: 2rem 0;
+  padding: 1.5rem 0;
 }
 
 footer span {
