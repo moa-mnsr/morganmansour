@@ -71,7 +71,7 @@ header {
 }
 
 .header-content {
-  padding: 1.5rem 0;
+  padding: 1rem 0;
 }
 
 .name {
@@ -106,9 +106,9 @@ article {
 }
 
 .bio p {
-  padding: 4rem 2rem 3.5rem 1rem;
-  line-height: 2;
-  font-size: 1.25rem;
+	padding: 1.5rem 2rem 2rem 1rem;
+	line-height: 2;
+	font-size: 1.25rem;
 }
 
 article p {
@@ -234,7 +234,7 @@ a.cv:hover .cv-text {
 }
 
 footer {
-  width: 100vw;
+  width: 100dvw;
   border-top: .25rem solid var(--Trees);
 }
 
@@ -243,7 +243,7 @@ footer {
   justify-content: space-around;
   font-weight: 300;
   font-size: 1.1rem;
-  padding: 1.5rem 0;
+  padding: 1rem 0;
 }
 
 footer span {
