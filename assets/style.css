@@ -143,6 +143,8 @@ h2 {
   font-size: 1.4rem;
   line-height: 1.5;
   font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+  transform: translateZ(0);
 }
 
 
