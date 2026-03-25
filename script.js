@@ -24,7 +24,7 @@ projectTitles.forEach(function (title) {
 projectTitles.forEach(function(title, index) {
 
     const projectContent = title.parentElement.querySelector('p');
-    if (index === 0) { // which categories are open
+    if (index < 2) { // which categories are open
         projectContent.style.display = 'block';
         const icon = title.querySelector('.dropdown-icon');
         icon.textContent = '⏷';
@@ -59,23 +59,20 @@ downArrow.addEventListener('click', function() {
     console.log('Scroll command sent');
 });
 
-// Intersection observer that gradually moves the sticky header up
-const cvSection = document.querySelector('.download-flex');
-const projectsHeader = document.querySelector('.projects-heading');
+// const cvSection = document.querySelector('.download-flex');
+// const projectsHeader = document.querySelector('.projects-heading');
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            // CV section is visible - push the header up gradually
-            projectsHeader.style.transform = 'translateY(-100px)';
-            projectsHeader.style.transition = 'transform 0.5s ease';
-        } else {
-            // CV section not visible - header back to normal
-            projectsHeader.style.transform = 'translateY(0)';
-        }
-    });
-}, {
-    rootMargin: '-100px 0px 0px 0px'
-});
+// const observer = new IntersectionObserver((entries) => {
+//     entries.forEach(entry => {
+//         if (entry.isIntersecting) {
+//             projectsHeader.style.transform = 'translateY(-100px)';
+//             projectsHeader.style.transition = 'transform 0.5s ease';
+//         } else {
+//             projectsHeader.style.transform = 'translateY(0)';
+//         }
+//     });
+// }, {
+//     rootMargin: '-100px 0px 0px 0px'
+// });
 
-observer.observe(cvSection);
+// observer.observe(cvSection);

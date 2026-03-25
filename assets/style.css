@@ -133,7 +133,7 @@ article p {
 h1 {
   text-align: center;
   text-transform: uppercase;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 300;
 
 }
@@ -555,11 +555,11 @@ footer span {
   }
 
 
-
+/*
   .bio p {
     font-size: 3rem;
     padding: 5rem 3rem 2rem 3rem;
-  }
+  }*/
 
   .down-arrow {
     font-size: 4rem;
