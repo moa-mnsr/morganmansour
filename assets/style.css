@@ -203,7 +203,7 @@ a.shade-hover:hover {
 .projects-heading {
   border-bottom: thick double var(--Trees);
   padding: 1rem 0;
-  position: sticky;
+  /*position: sticky;*/
   top: 0;
   background-color: var(--Clouds);
   z-index: 10;
