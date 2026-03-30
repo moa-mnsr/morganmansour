@@ -570,7 +570,7 @@ footer span {
   }
 
   .projects-heading {
-    padding: 1.5rem 0;
+    padding: 5rem 0 2rem 0;
   }
 
   .projects {
@@ -599,23 +599,12 @@ footer span {
     margin-right: 1.25rem;
   }
 
-  .cv-content {
-    justify-content: center;
-    font-size: 1.2rem;
-
-  }
 
   span.bolder-title {
     padding: 1.5px 0 0 0;
   }
 
-  .download-flex {
-    padding: 2.5rem 1rem;
-  }
 
-  .cv-content a {
-    margin: 0 0 0 3rem;
-  }
 
   .footer-content {
     display: flex;
