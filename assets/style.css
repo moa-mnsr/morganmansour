@@ -47,9 +47,47 @@ body {
   font-optical-sizing: auto;
   font-weight: 200;
   font-style: normal;
-  font-size: 1.1rem;
+  font-size: 6dvw;
+  margin: 9dvw;
 }
 
-.name {
-  font-style: a;
+/*header {
+	border: 3px solid var(--Sea);
+  padding: 3.25rem 0rem 3rem 0rem;
+  text-align: center;
+  font-size: 7dvw;
+}*/
+
+main {
+	padding: 2rem 0;
+}
+.projects-heading {
+	margin: 2rem 3rem;
+}
+
+.project-content h2 {
+  display: flex;
+  padding: .1rem 0;
+  border-bottom: 2px solid var(--Sea);
+}
+
+footer {
+	margin: 3.25rem 0rem 3rem 0rem;
+	display: flex;
+	justify-content: center;
+}
+
+
+.footer-content {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.footer-content a {
+	margin: 0.5rem .25rem .25rem .5rem;
+	background: var(--Sea);
+	color: var(--Clouds);
+	padding: 0.25rem;
+	text-decoration: none;
+	/* border: 2px solid var(--Sea); */
 }
