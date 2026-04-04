@@ -3,28 +3,28 @@
 @font-face {
   font-family: "Authentic Sans";
   src: url("fonts/authentic-sans-60.otf") format("opentype");
-  font-weight: 100;
+  font-weight: 60;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Authentic Sans";
   src: url("fonts/authentic-sans-90.otf") format("opentype");
-  font-weight: 200;
+  font-weight: 90;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Authentic Sans";
   src: url("fonts/authentic-sans-130.otf") format("opentype");
-  font-weight: 300;
+  font-weight: 130;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Authentic Sans";
   src: url("fonts/authentic-sans-150.otf") format("opentype");
-  font-weight: 400;
+  font-weight: 150;
   font-style: normal;
 }
 
@@ -45,25 +45,65 @@ body {
   color: var(--Sea);
   font-family: var(--font-nav);
   font-optical-sizing: auto;
-  font-weight: 200;
+  font-weight: 90;
   font-style: normal;
   font-size: 6dvw;
-  margin: 9dvw;
+  line-height: 1.2;
 }
 
-/*header {
-	border: 3px solid var(--Sea);
-  padding: 3.25rem 0rem 3rem 0rem;
-  text-align: center;
-  font-size: 7dvw;
+
+header {
+	display: flex;
+	/* justify-content: center; */
+	border-bottom: 4px solid var(--Sea);
+}
+
+/*
+.name {
+	background: var(--Sea);
+	color: var(--Clouds);
+	padding: 1rem 2rem;
+	text-decoration: none;
+  width: fit-content;
+  border-radius: 3rem;
 }*/
 
-main {
-	padding: 2rem 0;
+.header-content {
+  display: flex;
+  margin: 1rem;
+	justify-content: space-between;
+	width: 100dvw;
 }
+
+
+
+.pronouns {
+	margin: 0 3rem;
+  	padding: 1rem;
+} 
+
+
 .projects-heading {
-	margin: 2rem 3rem;
+	padding: 1rem 0 1rem 3rem;
+  	display: flex;
+	/* justify-content: center; */
+	border-bottom: 4px solid var(--Sea);
+    border-top: 4px solid var(--Sea);
+    display: flex;
 }
+
+.projects-heading h1 {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+
+ span.dot {
+	padding: 0 0.8rem 0 0;
+
+}
+
 
 .project-content h2 {
   display: flex;
@@ -71,12 +111,26 @@ main {
   border-bottom: 2px solid var(--Sea);
 }
 
+
+  section {
+	margin: 9dvw 10dvw;
+}
+
+
 footer {
-	margin: 3.25rem 0rem 3rem 0rem;
+    border-top: 4px solid var(--Sea);
 	display: flex;
 	justify-content: center;
 }
 
+/*
+.bio p {
+  padding: 0 0 2rem 0;
+}*/
+
+p.lead-paragraph {
+    padding-bottom: 1.5rem;
+}
 
 .footer-content {
 	display: flex;
