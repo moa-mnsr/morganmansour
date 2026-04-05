@@ -72,7 +72,7 @@ header {
   display: flex;
   margin: 1rem;
 	justify-content: space-between;
-	width: 100dvw;
+	width: 100%;
 }
 
 
@@ -135,6 +135,8 @@ p.lead-paragraph {
 .footer-content {
 	display: flex;
 	flex-wrap: wrap;
+   justify-content: center;
+   margin: 1rem;
 }
 
 .footer-content a {
@@ -144,4 +146,6 @@ p.lead-paragraph {
 	padding: 0.25rem;
 	text-decoration: none;
 	/* border: 2px solid var(--Sea); */
+  padding: 0.3rem .25rem 0.25rem .25rem;
+ 
 }
