@@ -140,12 +140,12 @@ p.lead-paragraph {
 }
 
 .footer-content a {
-	margin: 0.5rem .25rem .25rem .5rem;
+	margin: 0.5rem .25rem 0rem .5rem;
 	background: var(--Sea);
 	color: var(--Clouds);
 	padding: 0.25rem;
 	text-decoration: none;
-	/* border: 2px solid var(--Sea); */
-  padding: 0.3rem .25rem 0.25rem .25rem;
- 
+	border: 3px solid var(--Sea);
+	padding: .3rem .8rem .25rem .8rem;
+	border-radius: 2.5rem;
 }
