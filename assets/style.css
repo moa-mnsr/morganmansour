@@ -127,3 +127,9 @@ p.lead-paragraph {
 	padding: .3rem .8rem .25rem .8rem;
 	border-radius: 2.5rem;
 }
+
+@media (min-width: 500px) {
+  body {
+    font-size: 3dvw;
+  }
+}
