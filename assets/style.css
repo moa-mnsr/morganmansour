@@ -30,8 +30,8 @@
 
 
 :root {
-  --Clouds: #C7C2BF;
-  --Sea: #1d287d;
+    --Sea: #170278;
+  --Clouds: #F1F1F1;
   --font-nav: "Authentic Sans", sans-serif;
 }
 
@@ -52,6 +52,9 @@ body {
   line-height: 1.2;
 }
 
+h1 {
+  font-weight: 130;
+}
 
 header {
 	display: flex;
@@ -131,17 +134,17 @@ p.lead-paragraph {
 
 @media (min-width: 500px) {
   body {
-    font-size: 20px;
+    font-size: 3rem;
   }
 	
   h1 {
-  text-transform: uppercase;
+
   margin-bottom: 2rem;
 }
 
 
 	main {
-	margin: 6dvw 16dvw;
+	margin: 6dvw 10dvw;
 }
 
 p {
