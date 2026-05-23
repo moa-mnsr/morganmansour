@@ -28,9 +28,10 @@
   font-style: normal;
 }
 
+
 :root {
-  --Sea: #170278;
-  --Clouds: #F1F1F1;
+  --Clouds: #C7C2BF;
+  --Sea: #1d287d;
   --font-nav: "Authentic Sans", sans-serif;
 }
 
@@ -83,7 +84,7 @@ header {
 
 
  span.dot {
-	padding: 0 0.8rem 0 0;
+	padding: 0;
 
 }
 
@@ -95,7 +96,7 @@ header {
 }
 
 
-  section {
+  main {
 	margin: 9dvw 10dvw;
 }
 
@@ -130,10 +131,20 @@ p.lead-paragraph {
 
 @media (min-width: 500px) {
   body {
-    font-size: 2.5dvw;
+    font-size: 20px;
   }
 	
-	section {
-	margin: 6dvw 10dvw;
+  h1 {
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+
+	main {
+	margin: 6dvw 16dvw;
+}
+
+p {
+  margin-bottom: 1rem;
 }
 }
