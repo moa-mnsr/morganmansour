@@ -196,7 +196,6 @@ overflow-y: auto;
 }
 
 .bio {
-border-bottom: var(--border-width) solid var(--Sea);
 padding: 4rem 4.5rem 4rem 6rem;
 }
 
