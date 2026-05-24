@@ -2,35 +2,38 @@
 @font-face {
 font-family: "Authentic Sans";
 src: url("authentic-sans-90.otf") format("opentype");
-font-weight: 90;
 font-style: normal;
 }
+
 :root { 
   --Sea: #170278;
   --Clouds: #F1F1F1;
   --font-nav: "Authentic Sans", sans-serif;
   --border-width: 3px;
 }
+
 * {
 box-sizing: border-box;
 }
+
 /* Small mobile base styles, ex. iPhone SE */
 body {
 background-color: var(--Clouds);
 color: var(--Sea);
 font-family: var(--font-nav);
 font-optical-sizing: auto;
-font-weight: 90;
 font-style: normal;
 font-size: 1.25rem;
 line-height: 1.2;
 }
+
 .page-container {
 height: 100dvh;
 overflow: hidden;
 display: flex;
 flex-direction: column;
 }
+
 /* Fallback for older browsers that don't support dvh */
 @supports not (height: 100dvh) {
 .page-container {
@@ -38,6 +41,7 @@ height: 100vh;
 min-height: 100vh;
   }
 }
+
 header {
 display: flex;
 border-bottom: var(--border-width) solid var(--Sea);
@@ -50,23 +54,6 @@ margin: 1rem;
 justify-content: space-between;
 width: 100%;
 }
-.flex-column-left {
-padding: 2rem;
-border-bottom: var(--border-width) solid var(--Sea);
-}
-section p {
-padding: 3rem  3rem 0 3rem;
-}
-.bio {
-padding: 3rem;
-border-bottom: var(--border-width) solid var(--Sea);
-}
-.update {
-border-top: var(--border-width) solid var(--Sea);
-}
-span.dot {
-padding: 0;
-}
 
 main {
 flex: 1;
@@ -74,11 +61,18 @@ overflow-y: auto;
 display: flex;
 flex-direction: column;
 }
-.bottom, .update {
-padding-bottom: 3rem;
+
+.flex-column-left {
+padding: 2rem;
+border-bottom: var(--border-width) solid var(--Sea);
 }
-.middle {
-padding-top: 3rem;
+
+.flex-column-left p {
+padding: 1rem;
+}
+
+span.dot {
+padding: 0;
 }
 
 a {
@@ -88,11 +82,25 @@ text-decoration-thickness: 2px;
 text-underline-offset: 3px;
 }
 
+.bio {
+padding: 3rem;
+border-bottom: var(--border-width) solid var(--Sea);
+}
 
+section p {
+padding: 3rem 3rem 0 3rem;
+}
 
-footer a {
-text-underline-offset: 6px;
-text-decoration-thickness: var(--border-width);
+.middle {
+padding-top: 3rem;
+}
+
+.bottom, .update {
+padding-bottom: 3rem;
+}
+
+.update {
+border-top: var(--border-width) solid var(--Sea);
 }
 
 footer {
@@ -101,9 +109,12 @@ display: flex;
 width: 100%;
 padding: 0 1rem;
 }
-.flex-column-left p {
-padding: 1rem;
+
+footer a {
+text-underline-offset: 6px;
+text-decoration-thickness: var(--border-width);
 }
+
 .footer-content {
 display: flex;
 justify-content: space-between;
@@ -111,84 +122,112 @@ width: 100%;
 margin: 1rem 0;
 flex-wrap: wrap;
 }
+
 p.lead-paragraph {
 padding-bottom: 1.5rem;
 }
+
+/*----------------------
+DESKTOP VERSION
+----------------------*/
+
 @media (min-width: 1232px) {
 :root {
   --border-width: 4px;
 }
+
 body {
 font-size: 2rem;
 line-height: 1.3;
-  }
+}
+
+.header-content {
+  padding-left: 2rem;
+}
+
 main {
 /*margin: 6dvw 28dvw;*/
 display: flex;
 flex-direction: row;
 }
+
 .flex-column-left, .flex-column-right {
 display: flex;
 flex-direction: column;
 width: 50%;
 }
 
-a {
-  text-decoration-thickness: var(--border-width);
-}
 .flex-column-left {
 padding: 4.5rem 6rem;
 border-right: var(--border-width) solid var(--Sea);
 overflow: hidden;
 border-bottom: none;
 }
-.flex-column-right {
-overflow-y: auto;
-}
-.bottom {
-padding-bottom: 2rem;
-}
-.middle {
-padding-top: 3rem;
-}
-section p {
-padding: 4rem 4rem 0 6rem;
-}
-section {
-padding-bottom: 2rem;
-}
-.svg-container {
-display: flex;
-justify-content: center;
-cursor: pointer;
-}
-svg.circle {
-width: 3.5em;
-transition: transform .7s ease-in-out;
-}
-svg.circle path {
-fill: #E1D0B8;
-}
-svg.circle:hover {
-transform: rotate(360deg);
-}
-svg.circle:hover path {
-fill: #101010;
-}
-.bio {
-border-bottom: var(--border-width) solid var(--Sea);
-padding: 4rem 4.5rem 4rem 6rem;
-}
-.update {
-border-top: var(--border-width) solid var(--Sea);
-padding: 4rem 4.5rem 2rem 6rem;
-}
+
 .flex-column-left p {
 margin-bottom: 3rem;
 padding: 0;
 }
 
-footer {
-  padding: 0 2rem;
+.svg-container {
+display: flex;
+justify-content: center;
+cursor: pointer;
 }
+
+svg.circle {
+width: 3.5em;
+transition: transform .7s ease-in-out;
+}
+
+svg.circle path {
+fill: #E1D0B8;
+}
+
+svg.circle:hover {
+transform: rotate(360deg);
+}
+
+svg.circle:hover path {
+fill: #101010;
+}
+
+.flex-column-right {
+overflow-y: auto;
+}
+
+.bio {
+border-bottom: var(--border-width) solid var(--Sea);
+padding: 4rem 4.5rem 4rem 6rem;
+}
+
+section p {
+padding: 4rem 4rem 0 6rem;
+}
+
+section {
+padding-bottom: 2rem;
+}
+
+.middle {
+padding-top: 3rem;
+}
+
+.bottom {
+padding-bottom: 2rem;
+}
+
+.update {
+border-top: var(--border-width) solid var(--Sea);
+padding: 4rem 4.5rem 2rem 6rem;
+}
+
+a {
+text-decoration-thickness: var(--border-width);
+}
+
+footer {
+padding: 0 3rem;
+}
+
 }
