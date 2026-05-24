@@ -182,7 +182,7 @@ p.lead-paragraph {
 }
 
 .flex-column-left {
-   padding: 4rem 6rem;
+   padding: 4.5rem 6rem;
   	border-right: 4px solid var(--Sea);
     overflow: hidden;
     	border-bottom: none;
@@ -194,16 +194,45 @@ p.lead-paragraph {
   overflow-y: auto;
 }
 
-.flex-column-right p {
-   padding: 4rem 6rem;
+.last {
+  padding-bottom: 4rem;
+}
+
+section p {
+   padding: 4rem 4.5rem 0 6rem;
+}
+
+.svg-container {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+svg.circle {
+  width: 3.5em;
+  transition: transform .7s ease-in-out;
+}
+
+svg.circle path {
+  fill: #E1D0B8;
+}
+
+svg.circle:hover {
+  transform: rotate(360deg);
+}
+
+svg.circle:hover path {
+  fill: #101010;
 }
 
 .bio {
 	border-bottom: 4px solid var(--Sea);
+   padding: 4rem 4.5rem 4rem 6rem;
 }
 
 .update {
 	border-top: 4px solid var(--Sea);
+  padding: 4rem 4.5rem 4rem 6rem;
 }
 
 .flex-column-left p {
