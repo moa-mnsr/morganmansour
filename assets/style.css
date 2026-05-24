@@ -101,6 +101,19 @@ justify-content: space-between;
    	border-bottom: 4px solid var(--Sea);
 }
 
+.flex-column-right p {
+   padding: 3rem;
+}
+
+.bio {
+  	border-bottom: 4px solid var(--Sea);
+    
+}
+
+.update {
+  	border-top: 4px solid var(--Sea);
+}
+
  span.dot {
 	padding: 0;
 
@@ -187,8 +200,6 @@ p.lead-paragraph {
     overflow: hidden;
     	border-bottom: none;
 }
-
-
 
 .flex-column-right {
   overflow-y: auto;
