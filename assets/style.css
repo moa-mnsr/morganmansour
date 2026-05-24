@@ -62,7 +62,7 @@ flex-direction: column;
 }
 
 .flex-column-left {
-padding: 2rem;
+padding: 1rem;
 border-bottom: var(--border-width) solid var(--Sea);
 }
 
@@ -82,12 +82,12 @@ text-underline-offset: 3px;
 }
 
 .bio {
-padding: 3rem;
+padding: 2rem;
 border-bottom: var(--border-width) solid var(--Sea);
 }
 
 section p {
-padding: 3rem 3rem 0 3rem;
+	padding: 2rem 2rem 0 2rem;
 }
 
 .middle {
@@ -157,7 +157,7 @@ width: 50%;
 }
 
 .flex-column-left {
-padding: 4.5rem 6rem;
+padding: 4rem 6rem;
 border-right: var(--border-width) solid var(--Sea);
 overflow: hidden;
 border-bottom: none;
