@@ -21,7 +21,6 @@ body {
 background-color: var(--Clouds);
 color: var(--Sea);
 font-family: var(--font-nav);
-font-optical-sizing: auto;
 font-style: normal;
 font-size: 1.25rem;
 line-height: 1.2;
