@@ -31,6 +31,7 @@ body {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  
 }
 
 /* Fallback for older browsers that don't support dvh */
@@ -45,6 +46,8 @@ header {
   display: flex;
   border-bottom: var(--border-width) solid var(--Sea);
   padding-top: 3px;
+  z-index: 3;
+  position: relative;
 }
 
 .header-content {
@@ -61,13 +64,24 @@ main {
   flex-direction: column;
 }
 
-.flex-column-left {
+.anchor-container {
   padding: 1rem;
-  border-bottom: var(--border-width) solid var(--Sea);
+  border: none;
+  position: sticky;
+  top: 0;
+   background-color: var(--Clouds);
+    z-index: 1;
 }
 
-.flex-column-left p {
+.anchor-container p {
   padding: 0.5rem 1rem;
+}
+
+.fluid-container {
+  z-index: 2;
+    background-color: var(--Clouds);
+    position: relative;
+    border-top: var(--border-width) solid var(--Sea);
 }
 
 span.dot {
@@ -149,53 +163,35 @@ DESKTOP VERSION
     /*margin: 6dvw 28dvw;*/
     display: flex;
     flex-direction: row;
+    background-color: var(--Clouds);
   }
 
-  .flex-column-left,
-  .flex-column-right {
+  .anchor-container,
+  .fluid-container {
     display: flex;
     flex-direction: column;
     width: 50%;
+    
   }
 
- .flex-column-left {
+ .anchor-container {
     padding: 4rem 5rem 0rem 3rem;
     border-right: var(--border-width) solid var(--Sea);
     overflow: hidden;
     border-bottom: none;
+    position: static;
   }
   
-  .flex-column-left p {
+  .anchor-container p {
     margin-bottom: 3rem;
     padding: 0;
   }
 
-  .svg-container {
-    display: flex;
-    justify-content: center;
-    cursor: pointer;
-  }
-
-  svg.circle {
-    width: 3.5em;
-    transition: transform 0.7s ease-in-out;
-  }
-
-  svg.circle path {
-    fill: #e1d0b8;
-  }
-
-  svg.circle:hover {
-    transform: rotate(360deg);
-  }
-
-  svg.circle:hover path {
-    fill: #101010;
-  }
-
-  .flex-column-right {
+  .fluid-container {
     overflow-y: auto;
-  }
+    border: none;
+
+}
 
   .bio {
     padding: 4rem;
