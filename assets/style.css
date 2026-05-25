@@ -23,7 +23,7 @@ body {
   font-family: var(--font-nav);
   font-style: normal;
   font-size: 1.25rem;
-  line-height: 1.2;
+  line-height: 1.5;
 }
 
 .page-container {
@@ -65,16 +65,15 @@ main {
 }
 
 .anchor-container {
-  padding: 1rem;
   border: none;
   position: sticky;
   top: 0;
-   background-color: var(--Clouds);
-    z-index: 1;
+  background-color: var(--Clouds);
+  z-index: 1;
 }
 
-.anchor-container p {
-  padding: 0.5rem 1rem;
+p.greeting {
+  padding-bottom: 1.5rem;
 }
 
 .fluid-container {
@@ -95,27 +94,19 @@ a {
   text-underline-offset: 3px;
 }
 
-.bio {
-  padding: 1.5rem 2rem;
+section.elaboration {
+  border-top: var(--border-width) solid var(--Sea);
   border-bottom: var(--border-width) solid var(--Sea);
 }
 
-section p {
-  padding: 1.5rem 2rem 0 2rem;
+section {
+  padding: 2rem;
 }
 
 .middle {
-  padding-top: 1.5rem;
+  padding: 1.5rem 0;
 }
 
-.bottom {
-  padding-bottom: 1.5rem;
-}
-
-.update {
-  border-top: var(--border-width) solid var(--Sea);
-   padding-bottom: 2rem;
-}
 
 footer {
   border-top: var(--border-width) solid var(--Sea);
@@ -137,9 +128,6 @@ footer a {
   flex-wrap: wrap;
 }
 
-p.lead-paragraph {
-  padding-bottom: 1.5rem;
-}
 
 /*----------------------
 DESKTOP VERSION
@@ -152,11 +140,11 @@ DESKTOP VERSION
 
   body {
     font-size: 2rem;
-    line-height: 1.3;
+    line-height: 1.4;
   }
 
-  .header-content {
-    padding-left: 2rem;
+ .header-content {
+    padding-left: 1rem;
   }
 
   main {
@@ -175,17 +163,16 @@ DESKTOP VERSION
   }
 
  .anchor-container {
-    padding: 4rem 5rem 0rem 3rem;
     border-right: var(--border-width) solid var(--Sea);
     overflow: hidden;
     border-bottom: none;
     position: static;
   }
   
-  .anchor-container p {
-    margin-bottom: 3rem;
-    padding: 0;
-  }
+
+  p.greeting {
+  padding-bottom: 3rem;
+}
 
   .fluid-container {
     overflow-y: auto;
@@ -193,37 +180,20 @@ DESKTOP VERSION
 
 }
 
-  .bio {
-    padding: 4rem;
-  }
 
-  section p {
-    padding: 4rem 4rem 0 5rem;
-  }
-
-  section {
-    padding-bottom: 2rem;
+ section {
+    padding: 3rem 4rem;
   }
 
   .middle {
-    padding-top: 2rem;
-  }
-
-  .bottom {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-  }
-
-  .update {
-    border-top: var(--border-width) solid var(--Sea);
-    padding: 4rem 4rem 2rem 5rem;
+    padding: 2rem 0;
   }
 
   a {
     text-decoration-thickness: var(--border-width);
   }
 
-  footer {
-    padding: 0 3rem;
+ footer {
+    padding: 0 2rem;
   }
 }
