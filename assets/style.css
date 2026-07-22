@@ -8,6 +8,7 @@
 :root {
   --Wood: #C07616;
   --Clouds: #f7f7f7;
+  --Water:  #50B6C0;
   --font-nav: "Authentic Sans", sans-serif;
   --border-width: 2px;
 }
@@ -94,6 +95,9 @@ a {
   text-underline-offset: 3px;
 }
 
+a:hover {
+  color: var(--Sky);
+}
 
 section.elaboration {
   border-top: var(--border-width) solid var(--Wood);
