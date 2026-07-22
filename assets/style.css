@@ -6,10 +6,10 @@
 }
 
 :root {
-  --Sea: #170278;
-  --Clouds: #f1f1f1;
+  --Wood: rgb(192, 118, 22);
+  --Clouds: #e9ebf1;
   --font-nav: "Authentic Sans", sans-serif;
-  --border-width: 3px;
+  --border-width: 2px;
 }
 
 * {
@@ -19,11 +19,11 @@
 /* Small mobile base styles, ex. iPhone SE */
 body {
   background-color: var(--Clouds);
-  color: var(--Sea);
+  color: var(--Wood);
   font-family: var(--font-nav);
   font-style: normal;
-  font-size: 1.25rem;
-  line-height: 1.5;
+  font-size: 1rem;
+  line-height: 1.2;
 }
 
 .page-container {
@@ -44,7 +44,7 @@ body {
 
 header {
   display: flex;
-  border-bottom: var(--border-width) solid var(--Sea);
+  border-bottom: var(--border-width) solid var(--Wood);
   padding-top: 3px;
   z-index: 3;
   position: relative;
@@ -80,7 +80,7 @@ p.greeting {
   z-index: 2;
     background-color: var(--Clouds);
     position: relative;
-    border-top: var(--border-width) solid var(--Sea);
+    border-top: var(--border-width) solid var(--Wood);
 }
 
 span.dot {
@@ -88,15 +88,16 @@ span.dot {
 }
 
 a {
-  color: var(--Sea);
+  color: var(--Wood);
   text-decoration-line: underline;
   text-decoration-thickness: 2px;
   text-underline-offset: 3px;
 }
 
+
 section.elaboration {
-  border-top: var(--border-width) solid var(--Sea);
-  border-bottom: var(--border-width) solid var(--Sea);
+  border-top: var(--border-width) solid var(--Wood);
+  border-bottom: var(--border-width) solid var(--Wood);
 }
 
 section {
@@ -109,7 +110,7 @@ section {
 
 
 footer {
-  border-top: var(--border-width) solid var(--Sea);
+  border-top: var(--border-width) solid var(--Wood);
   display: flex;
   width: 100%;
   padding: .1rem 1rem;
@@ -135,16 +136,16 @@ DESKTOP VERSION
 
 @media (min-width: 1232px) {
   :root {
-    --border-width: 4px;
+    --border-width: 3px;
   }
 
   body {
     font-size: 2rem;
-    line-height: 1.4;
+    line-height: 1.2;
   }
 
  .header-content {
-    padding-left: 1rem;
+    padding: 0 3rem;
   }
 
   main {
@@ -163,7 +164,7 @@ DESKTOP VERSION
   }
 
  .anchor-container {
-    border-right: var(--border-width) solid var(--Sea);
+    border-right: var(--border-width) solid var(--Wood);
     overflow: hidden;
     border-bottom: none;
     position: static;
@@ -171,7 +172,7 @@ DESKTOP VERSION
   
 
   p.greeting {
-  padding-bottom: 3rem;
+  padding-bottom: 2rem;
 }
 
   .fluid-container {
@@ -190,7 +191,7 @@ DESKTOP VERSION
   }
 
   a {
-    text-decoration-thickness: var(--border-width);
+    text-decoration-thickness: 1px;
   }
 
 footer {
